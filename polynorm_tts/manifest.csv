@@ -1,0 +1,541 @@
+index,category,original_text,normalized_text,model,voice,audio_path,status
+1,Date,The event is on 05/20/2023.,The event is on May twentieth twenty twenty three.,Kokoro-82M,af_heart,af_heart\Date\1.wav,generated
+2,Date,Her birthday is Oct 12.,Her birthday is October twelfth.,Kokoro-82M,af_heart,af_heart\Date\2.wav,generated
+3,Date,They married on 3rd July 1995.,They married on July third nineteen ninety five.,Kokoro-82M,af_heart,af_heart\Date\3.wav,generated
+4,Date,The deadline is 2024-12-31.,The deadline is December thirty first twenty twenty four.,Kokoro-82M,af_heart,af_heart\Date\4.wav,generated
+5,Date,We moved in on 1/1/22.,We moved in on January first twenty two.,Kokoro-82M,af_heart,af_heart\Date\5.wav,generated
+6,Date,The meeting is scheduled for 15th August.,The meeting is scheduled for the fifteenth of August.,Kokoro-82M,af_heart,af_heart\Date\6.wav,generated
+7,Date,He was born on 04-09-1980.,He was born on April ninth nineteen eighty.,Kokoro-82M,af_heart,af_heart\Date\7.wav,generated
+8,Date,The festival runs from June 5 to June 10.,The festival runs from June fifth to June tenth.,Kokoro-82M,af_heart,af_heart\Date\8.wav,generated
+9,Date,The contract expires on 11/30.,The contract expires on November thirtieth.,Kokoro-82M,af_heart,af_heart\Date\9.wav,generated
+10,Date,The document is dated 7-4-1776.,The document is dated July fourth seventeen seventy six.,Kokoro-82M,af_heart,af_heart\Date\10.wav,generated
+11,Date,The conference is on 2025/03/15.,The conference is on March fifteenth twenty twenty five.,Kokoro-82M,af_heart,af_heart\Date\11.wav,generated
+12,Date,The flight is booked for 2nd September.,The flight is booked for September second.,Kokoro-82M,af_heart,af_heart\Date\12.wav,generated
+13,Date,The warranty ends on 12/25/2024.,The warranty ends on December twenty fifth twenty twenty four.,Kokoro-82M,af_heart,af_heart\Date\13.wav,generated
+14,Date,The deadline is 31 Jan 2025.,The deadline is January thirty first twenty twenty five.,Kokoro-82M,af_heart,af_heart\Date\14.wav,generated
+15,Date,The event starts on 06/10.,The event starts on June tenth.,Kokoro-82M,af_heart,af_heart\Date\15.wav,generated
+16,Date,The report was filed on 8-15-2023.,The report was filed on August fifteenth twenty twenty three.,Kokoro-82M,af_heart,af_heart\Date\16.wav,generated
+17,Date,The exhibit opens on 09/01/24.,The exhibit opens on September first twenty four.,Kokoro-82M,af_heart,af_heart\Date\17.wav,generated
+18,Date,The sale ends on 5th Nov.,The sale ends on November fifth.,Kokoro-82M,af_heart,af_heart\Date\18.wav,generated
+19,Date,The application is due 2026-07-04.,The application is due July fourth twenty twenty six.,Kokoro-82M,af_heart,af_heart\Date\19.wav,generated
+20,Date,The reunion is on 10/10/25.,The reunion is on October tenth twenty five.,Kokoro-82M,af_heart,af_heart\Date\20.wav,generated
+21,Time,Let's meet at 10:30 tomorrow.,Let's meet at ten thirty tomorrow.,Kokoro-82M,af_heart,af_heart\Time\21.wav,generated
+22,Time,The train departs at 15:45.,The train departs at fifteen forty five,Kokoro-82M,af_heart,af_heart\Time\22.wav,generated
+23,Time,Breakfast is served at 7 AM.,Breakfast is served at seven A M.,Kokoro-82M,af_heart,af_heart\Time\23.wav,generated
+24,Time,The show starts at 8:15 PM.,The show starts at eight fifteen P M.,Kokoro-82M,af_heart,af_heart\Time\24.wav,generated
+25,Time,The deadline is 23:59.,The deadline is twenty three fifty nine.,Kokoro-82M,af_heart,af_heart\Time\25.wav,generated
+26,Time,The store opens at 9:00.,The store opens at nine o'clock.,Kokoro-82M,af_heart,af_heart\Time\26.wav,generated
+27,Time,The meeting is at 12:00 noon.,The meeting is at twelve noon.,Kokoro-82M,af_heart,af_heart\Time\27.wav,generated
+28,Time,The flight leaves at 06:20.,The flight leaves at six twenty.,Kokoro-82M,af_heart,af_heart\Time\28.wav,generated
+29,Time,The class ends at 4:45 PM.,The class ends at four forty five P M.,Kokoro-82M,af_heart,af_heart\Time\29.wav,generated
+30,Time,The alarm goes off at 5:30 AM.,The alarm goes off at five thirty A M.,Kokoro-82M,af_heart,af_heart\Time\30.wav,generated
+31,Time,The concert begins at 19:00.,The concert begins at nineteen hundred hours.,Kokoro-82M,af_heart,af_heart\Time\31.wav,generated
+32,Time,The webinar is at 13:15.,The webinar is at thirteen fifteen.,Kokoro-82M,af_heart,af_heart\Time\32.wav,generated
+33,Time,The bakery closes at 3 PM.,The bakery closes at three P M.,Kokoro-82M,af_heart,af_heart\Time\33.wav,generated
+34,Time,The deadline is midnight.,The deadline is midnight.,Kokoro-82M,af_heart,af_heart\Time\34.wav,generated
+35,Time,The movie starts at 6:00 PM.,The movie starts at six P M.,Kokoro-82M,af_heart,af_heart\Time\35.wav,generated
+36,Time,The bus arrives at 14:50.,The bus arrives at fourteen fifty.,Kokoro-82M,af_heart,af_heart\Time\36.wav,generated
+37,Time,The office opens at 8:30 AM.,The office opens at eight thirty A M.,Kokoro-82M,af_heart,af_heart\Time\37.wav,generated
+38,Time,The appointment is at 11:45.,The appointment is at eleven forty five.,Kokoro-82M,af_heart,af_heart\Time\38.wav,generated
+39,Time,The game kicks off at 20:00.,The game kicks off at twenty hundred hours.,Kokoro-82M,af_heart,af_heart\Time\39.wav,generated
+40,Time,The workshop ends at 5:15 PM.,The workshop ends at five fifteen P M.,Kokoro-82M,af_heart,af_heart\Time\40.wav,generated
+41,Cardinal,There are 25 students in the class.,There are twenty five students in the class.,Kokoro-82M,af_heart,af_heart\Cardinal\41.wav,generated
+42,Cardinal,She bought 3 apples.,She bought three apples.,Kokoro-82M,af_heart,af_heart\Cardinal\42.wav,generated
+43,Cardinal,The building has 100 floors.,The building has one hundred floors.,Kokoro-82M,af_heart,af_heart\Cardinal\43.wav,generated
+44,Cardinal,He scored 99 on the test.,He scored ninety nine on the test.,Kokoro-82M,af_heart,af_heart\Cardinal\44.wav,generated
+45,Cardinal,The team won 5 championships.,The team won five championships.,Kokoro-82M,af_heart,af_heart\Cardinal\45.wav,generated
+46,Cardinal,There were 12 guests at the party.,There were twelve guests at the party.,Kokoro-82M,af_heart,af_heart\Cardinal\46.wav,generated
+47,Cardinal,The recipe calls for 2 eggs.,The recipe calls for two eggs.,Kokoro-82M,af_heart,af_heart\Cardinal\47.wav,generated
+48,Cardinal,The car can seat 7 people.,The car can seat seven people.,Kokoro-82M,af_heart,af_heart\Cardinal\48.wav,generated
+49,Cardinal,The book has 450 pages.,The book has four hundred fifty pages.,Kokoro-82M,af_heart,af_heart\Cardinal\49.wav,generated
+50,Cardinal,"The company employs 1,200 workers.",The company employs one thousand two hundred workers.,Kokoro-82M,af_heart,af_heart\Cardinal\50.wav,generated
+51,Cardinal,"The marathon had 10,000 runners.",The marathon had ten thousand runners.,Kokoro-82M,af_heart,af_heart\Cardinal\51.wav,generated
+52,Cardinal,She waited for 15 minutes.,She waited for fifteen minutes.,Kokoro-82M,af_heart,af_heart\Cardinal\52.wav,generated
+53,Cardinal,The laptop weighs 4 pounds.,The laptop weighs four pounds.,Kokoro-82M,af_heart,af_heart\Cardinal\53.wav,generated
+54,Cardinal,The city has 8 million residents.,The city has eight million residents.,Kokoro-82M,af_heart,af_heart\Cardinal\54.wav,generated
+55,Cardinal,The team scored 21 points.,The team scored twenty one points.,Kokoro-82M,af_heart,af_heart\Cardinal\55.wav,generated
+56,Cardinal,The store sells 50 kinds of cheese.,The store sells fifty kinds of cheese.,Kokoro-82M,af_heart,af_heart\Cardinal\56.wav,generated
+57,Cardinal,The bus arrives in 30 minutes.,The bus arrives in thirty minutes.,Kokoro-82M,af_heart,af_heart\Cardinal\57.wav,generated
+58,Cardinal,The hotel has 150 rooms.,The hotel has one hundred fifty rooms.,Kokoro-82M,af_heart,af_heart\Cardinal\58.wav,generated
+59,Cardinal,The painting sold for $1.5 million.,The painting sold for one point five million dollars.,Kokoro-82M,af_heart,af_heart\Cardinal\59.wav,generated
+60,Cardinal,The hike is 7 miles long.,The hike is seven miles long.,Kokoro-82M,af_heart,af_heart\Cardinal\60.wav,generated
+61,Ordinal,She finished in 1st place.,She finished in first place.,Kokoro-82M,af_heart,af_heart\Ordinal\61.wav,generated
+62,Ordinal,This is the 3rd time I've called.,This is the third time I've called.,Kokoro-82M,af_heart,af_heart\Ordinal\62.wav,generated
+63,Ordinal,He lives on the 22nd floor.,He lives on the twenty second floor.,Kokoro-82M,af_heart,af_heart\Ordinal\63.wav,generated
+64,Ordinal,The 5th chapter is the most interesting.,The fifth chapter is the most interesting.,Kokoro-82M,af_heart,af_heart\Ordinal\64.wav,generated
+65,Ordinal,Her birthday is on the 10th.,Her birthday is on the tenth.,Kokoro-82M,af_heart,af_heart\Ordinal\65.wav,generated
+66,Ordinal,The 100th anniversary is next year.,The one hundredth anniversary is next year.,Kokoro-82M,af_heart,af_heart\Ordinal\66.wav,generated
+67,Ordinal,They celebrated their 25th wedding anniversary.,They celebrated their twenty fifth wedding anniversary.,Kokoro-82M,af_heart,af_heart\Ordinal\67.wav,generated
+68,Ordinal,The store is on 42nd Street.,The store is on forty second Street.,Kokoro-82M,af_heart,af_heart\Ordinal\68.wav,generated
+69,Ordinal,This is my 2nd attempt.,This is my second attempt.,Kokoro-82M,af_heart,af_heart\Ordinal\69.wav,generated
+70,Ordinal,The 15th of March is a holiday.,The fifteenth of March is a holiday.,Kokoro-82M,af_heart,af_heart\Ordinal\70.wav,generated
+71,Ordinal,He ranked 50th in the competition.,He ranked fiftieth in the competition.,Kokoro-82M,af_heart,af_heart\Ordinal\71.wav,generated
+72,Ordinal,"The 1st prize is $10,000.",The first prize is ten thousand dollars.,Kokoro-82M,af_heart,af_heart\Ordinal\72.wav,generated
+73,Ordinal,The 9th inning was intense.,The ninth inning was intense.,Kokoro-82M,af_heart,af_heart\Ordinal\73.wav,generated
+74,Ordinal,She is the 4th person to ask.,She is the fourth person to ask.,Kokoro-82M,af_heart,af_heart\Ordinal\74.wav,generated
+75,Ordinal,The 30th birthday is a milestone.,The thirtieth birthday is a milestone.,Kokoro-82M,af_heart,af_heart\Ordinal\75.wav,generated
+76,Ordinal,The 7th guest arrived late.,The seventh guest arrived late.,Kokoro-82M,af_heart,af_heart\Ordinal\76.wav,generated
+77,Ordinal,The 12th month is December.,The twelfth month is December.,Kokoro-82M,af_heart,af_heart\Ordinal\77.wav,generated
+78,Ordinal,The 21st century began in 2001.,The twenty first century began in two thousand one.,Kokoro-82M,af_heart,af_heart\Ordinal\78.wav,generated
+79,Ordinal,The 6th sense is intuition.,The sixth sense is intuition.,Kokoro-82M,af_heart,af_heart\Ordinal\79.wav,generated
+80,Ordinal,The 18th hole is the hardest.,The eighteenth hole is the hardest.,Kokoro-82M,af_heart,af_heart\Ordinal\80.wav,generated
+81,Decimal,The temperature is 98.6°F.,The temperature is ninety eight point six degrees Fahrenheit.,Kokoro-82M,af_heart,af_heart\Decimal\81.wav,generated
+82,Decimal,The measurement is 3.14 cm.,The measurement is three point one four centimeters.,Kokoro-82M,af_heart,af_heart\Decimal\82.wav,generated
+83,Decimal,The price increased by 2.5%.,The price increased by two point five percent.,Kokoro-82M,af_heart,af_heart\Decimal\83.wav,generated
+84,Decimal,The weight is 0.75 kg.,The weight is zero point seven five kilograms.,Kokoro-82M,af_heart,af_heart\Decimal\84.wav,generated
+85,Decimal,The distance is 5.2 miles.,The distance is five point two miles.,Kokoro-82M,af_heart,af_heart\Decimal\85.wav,generated
+86,Decimal,The score was 7.8 out of 10.,The score was seven point eight out of ten.,Kokoro-82M,af_heart,af_heart\Decimal\86.wav,generated
+87,Decimal,The ratio is 1.5:1.,The ratio is one point five to one.,Kokoro-82M,af_heart,af_heart\Decimal\87.wav,generated
+88,Decimal,The bottle holds 1.75 liters.,The bottle holds one point seven five liters.,Kokoro-82M,af_heart,af_heart\Decimal\88.wav,generated
+89,Decimal,The interest rate is 3.25%.,The interest rate is three point two five percent.,Kokoro-82M,af_heart,af_heart\Decimal\89.wav,generated
+90,Decimal,The growth rate is 0.8%.,The growth rate is zero point eight percent.,Kokoro-82M,af_heart,af_heart\Decimal\90.wav,generated
+91,Decimal,The average is 4.6.,The average is four point six.,Kokoro-82M,af_heart,af_heart\Decimal\91.wav,generated
+92,Decimal,The speed was 55.5 mph.,The speed was fifty five point five miles per hour.,Kokoro-82M,af_heart,af_heart\Decimal\92.wav,generated
+93,Decimal,The dosage is 0.5 mg.,The dosage is zero point five milligrams.,Kokoro-82M,af_heart,af_heart\Decimal\93.wav,generated
+94,Decimal,The voltage is 12.3 V.,The voltage is twelve point three volts.,Kokoro-82M,af_heart,af_heart\Decimal\94.wav,generated
+95,Decimal,The length is 6.25 inches.,The length is six point two five inches.,Kokoro-82M,af_heart,af_heart\Decimal\95.wav,generated
+96,Decimal,The density is 1.05 g/cm³.,The density is one point zero five grams per cubic centimeter.,Kokoro-82M,af_heart,af_heart\Decimal\96.wav,generated
+97,Decimal,The angle is 22.5 degrees.,The angle is twenty two point five degrees.,Kokoro-82M,af_heart,af_heart\Decimal\97.wav,generated
+98,Decimal,The discount is 15.99%.,The discount is fifteen point nine nine percent.,Kokoro-82M,af_heart,af_heart\Decimal\98.wav,generated
+99,Decimal,The battery is at 87.5%.,The battery is at eighty seven point five percent.,Kokoro-82M,af_heart,af_heart\Decimal\99.wav,generated
+100,Decimal,The concentration is 0.01 M.,The concentration is zero point zero one molar.,Kokoro-82M,af_heart,af_heart\Decimal\100.wav,generated
+101,Fractions,Add 1/2 cup of sugar.,Add one half cup of sugar.,Kokoro-82M,af_heart,af_heart\Fractions\101.wav,generated
+102,Fractions,She ate 3/4 of the pizza.,She ate three fourths of the pizza.,Kokoro-82M,af_heart,af_heart\Fractions\102.wav,generated
+103,Fractions,The glass is 2/3 full.,The glass is two thirds full.,Kokoro-82M,af_heart,af_heart\Fractions\103.wav,generated
+104,Fractions,He owns 1/8 of the company.,He owns one eighth of the company.,Kokoro-82M,af_heart,af_heart\Fractions\104.wav,generated
+105,Fractions,Cut the paper into 1/16 pieces.,Cut the paper into one sixteenth pieces.,Kokoro-82M,af_heart,af_heart\Fractions\105.wav,generated
+106,Fractions,The recipe requires 1 1/2 teaspoons.,The recipe requires one and a half teaspoons.,Kokoro-82M,af_heart,af_heart\Fractions\106.wav,generated
+107,Fractions,She drank 5/6 of the juice.,She drank five sixths of the juice.,Kokoro-82M,af_heart,af_heart\Fractions\107.wav,generated
+108,Fractions,The tank is 7/8 empty.,The tank is seven eighths empty.,Kokoro-82M,af_heart,af_heart\Fractions\108.wav,generated
+109,Fractions,The discount is 1/4 off.,The discount is one fourth off.,Kokoro-82M,af_heart,af_heart\Fractions\109.wav,generated
+110,Fractions,The room is 3 3/4 meters wide.,The room is three and three fourths meters wide.,Kokoro-82M,af_heart,af_heart\Fractions\110.wav,generated
+111,Fractions,He finished 9/10 of the work.,He finished nine tenths of the work.,Kokoro-82M,af_heart,af_heart\Fractions\111.wav,generated
+112,Fractions,The pie was divided into 1/12 slices.,The pie was divided into one twelfth slices.,Kokoro-82M,af_heart,af_heart\Fractions\112.wav,generated
+113,Fractions,The margin is 5 1/2 inches.,The margin is five and a half inches.,Kokoro-82M,af_heart,af_heart\Fractions\113.wav,generated
+114,Fractions,The mixture is 2/5 water.,The mixture is two fifths water.,Kokoro-82M,af_heart,af_heart\Fractions\114.wav,generated
+115,Fractions,The probability is 3/7.,The probability is three sevenths.,Kokoro-82M,af_heart,af_heart\Fractions\115.wav,generated
+116,Fractions,The length is 4 3/8 feet.,The length is four and three eighths feet.,Kokoro-82M,af_heart,af_heart\Fractions\116.wav,generated
+117,Fractions,The team won 11/12 games.,The team won eleven twelfths games.,Kokoro-82M,af_heart,af_heart\Fractions\117.wav,generated
+118,Fractions,The solution is 1/20 diluted.,The solution is one twentieth diluted.,Kokoro-82M,af_heart,af_heart\Fractions\118.wav,generated
+119,Fractions,The ratio is 7/9.,The ratio is seven ninths.,Kokoro-82M,af_heart,af_heart\Fractions\119.wav,generated
+120,Fractions,The distance is 1 1/4 miles.,The distance is one and a quarter miles.,Kokoro-82M,af_heart,af_heart\Fractions\120.wav,generated
+121,Roman Numeral,Chapter VII is my favorite.,Chapter seven is my favorite.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\121.wav,generated
+122,Roman Numeral,Super Bowl LVI was exciting.,Super Bowl fifty six was exciting.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\122.wav,generated
+123,Roman Numeral,King Henry VIII had six wives.,King Henry the eighth had six wives.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\123.wav,generated
+124,Roman Numeral,The film won an Oscar for Best Picture in MMXX.,The film won an Oscar for Best Picture in twenty twenty.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\124.wav,generated
+125,Roman Numeral,The clock showed XII.,The clock showed twelve.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\125.wav,generated
+126,Roman Numeral,The event is scheduled for MMXXIV.,The event is scheduled for twenty twenty four.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\126.wav,generated
+127,Roman Numeral,The book is Volume III.,The book is Volume three.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\127.wav,generated
+128,Roman Numeral,The document is dated MDCCLXXVI.,The document is dated seventeen seventy six.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\128.wav,generated
+129,Roman Numeral,The statue was built in MCMLXXXIX.,The statue was built in nineteen eighty nine.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\129.wav,generated
+130,Roman Numeral,The conference is in Part IX.,The conference is in Part nine.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\130.wav,generated
+131,Roman Numeral,The building is on Block XLII.,The building is on Block forty two.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\131.wav,generated
+132,Roman Numeral,The manuscript is from the XV century.,The manuscript is from the fifteenth century.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\132.wav,generated
+133,Roman Numeral,The treaty was signed in MCMXLV.,The treaty was signed in nineteen forty five.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\133.wav,generated
+134,Roman Numeral,The painting is from the XVIII dynasty.,The painting is from the eighteenth dynasty.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\134.wav,generated
+135,Roman Numeral,The exhibit features artifacts from MM.,The exhibit features artifacts from two thousand.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\135.wav,generated
+136,Roman Numeral,"The play is Act IV, Scene II.","The play is Act four, Scene two.",Kokoro-82M,af_heart,af_heart\Roman_Numeral\136.wav,generated
+137,Roman Numeral,The coin is from the year MCMXC.,The coin is from the year nineteen ninety.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\137.wav,generated
+138,Roman Numeral,The building was constructed in MDCCCXLV.,The building was constructed in eighteen forty five.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\138.wav,generated
+139,Roman Numeral,The document is numbered CXII.,The document is numbered one hundred twelve.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\139.wav,generated
+140,Roman Numeral,The event is in Section XXI.,The event is in Section twenty one.,Kokoro-82M,af_heart,af_heart\Roman_Numeral\140.wav,generated
+141,Phone Number,Call me at 555-123-4567.,Call me at five five five one two three four five six seven.,Kokoro-82M,af_heart,af_heart\Phone_Number\141.wav,generated
+142,Phone Number,Her number is (212) 555-0199.,Her number is two one two five five five zero one nine nine.,Kokoro-82M,af_heart,af_heart\Phone_Number\142.wav,generated
+143,Phone Number,The office number is 800-555-0000.,The office number is eight zero zero five five five zero zero zero zero.,Kokoro-82M,af_heart,af_heart\Phone_Number\143.wav,generated
+144,Phone Number,Dial 911 in an emergency.,Dial nine one one in an emergency.,Kokoro-82M,af_heart,af_heart\Phone_Number\144.wav,generated
+145,Phone Number,My contact is +1-202-555-0175.,My contact is plus one two zero two five five five zero one seven five.,Kokoro-82M,af_heart,af_heart\Phone_Number\145.wav,generated
+146,Phone Number,The helpline is 1-888-555-1234.,The helpline is one eight eight eight five five five one two three four.,Kokoro-82M,af_heart,af_heart\Phone_Number\146.wav,generated
+147,Phone Number,Text me at 555-7890.,Text me at five five five seven eight nine zero.,Kokoro-82M,af_heart,af_heart\Phone_Number\147.wav,generated
+148,Phone Number,The fax number is 555-234-5678.,The fax number is five five five two three four five six seven eight.,Kokoro-82M,af_heart,af_heart\Phone_Number\148.wav,generated
+149,Phone Number,Customer service is at 1-800-555-6789.,Customer service is at one eight zero zero five five five six seven eight nine.,Kokoro-82M,af_heart,af_heart\Phone_Number\149.wav,generated
+150,Phone Number,The hotel's number is (305) 555-0101.,The hotel's number is three zero five five five five zero one zero one.,Kokoro-82M,af_heart,af_heart\Phone_Number\150.wav,generated
+151,Phone Number,Reach me at 555.123.4567.,Reach me at five five five one two three four five six seven.,Kokoro-82M,af_heart,af_heart\Phone_Number\151.wav,generated
+152,Phone Number,The support line is 555-9876.,The support line is five five five nine eight seven six.,Kokoro-82M,af_heart,af_heart\Phone_Number\152.wav,generated
+153,Phone Number,Call 555-000-9999 for assistance.,Call five five five zero zero zero nine nine nine nine for assistance.,Kokoro-82M,af_heart,af_heart\Phone_Number\153.wav,generated
+154,Phone Number,The business number is 555-321-6547.,The business number is five five five three two one six five four seven.,Kokoro-82M,af_heart,af_heart\Phone_Number\154.wav,generated
+155,Phone Number,My mobile is 555-876-5432.,My mobile is five five five eight seven six five four three two.,Kokoro-82M,af_heart,af_heart\Phone_Number\155.wav,generated
+156,Phone Number,The reservation line is 1-555-123-4567.,The reservation line is one five five five one two three four five six seven.,Kokoro-82M,af_heart,af_heart\Phone_Number\156.wav,generated
+157,Phone Number,Contact us at 555-111-2222.,Contact us at five five five one one one two two two two.,Kokoro-82M,af_heart,af_heart\Phone_Number\157.wav,generated
+158,Phone Number,The clinic's number is 555-444-3333.,The clinic's number is five five five four four four three three three three.,Kokoro-82M,af_heart,af_heart\Phone_Number\158.wav,generated
+159,Phone Number,The hotline is 555-555-5555.,The hotline is five five five five five five five five five five.,Kokoro-82M,af_heart,af_heart\Phone_Number\159.wav,generated
+160,Phone Number,The reception desk is at 555-678-9012.,The reception desk is at five five five six seven eight nine zero one two.,Kokoro-82M,af_heart,af_heart\Phone_Number\160.wav,generated
+161,Currency,The price is $10.99.,The price is ten dollars and ninety nine cents.,Kokoro-82M,af_heart,af_heart\Currency\161.wav,generated
+162,Currency,She paid €25 for the book.,She paid twenty five euros for the book.,Kokoro-82M,af_heart,af_heart\Currency\162.wav,generated
+163,Currency,The fee is ¥5000.,The fee is five thousand yen.,Kokoro-82M,af_heart,af_heart\Currency\163.wav,generated
+164,Currency,The cost is £15.50.,The cost is fifteen pounds and fifty pence.,Kokoro-82M,af_heart,af_heart\Currency\164.wav,generated
+165,Currency,The donation was $100.,The donation was one hundred dollars.,Kokoro-82M,af_heart,af_heart\Currency\165.wav,generated
+166,Currency,The rent is €1200 per month.,The rent is one thousand two hundred euros per month.,Kokoro-82M,af_heart,af_heart\Currency\166.wav,generated
+167,Currency,The ticket costs ₹750.,The ticket costs seven hundred fifty rupees.,Kokoro-82M,af_heart,af_heart\Currency\167.wav,generated
+168,Currency,The bill came to $45.67.,The bill came to forty five dollars and sixty seven cents.,Kokoro-82M,af_heart,af_heart\Currency\168.wav,generated
+169,Currency,The exchange rate is 1.2 USD to EUR.,The exchange rate is one point two U S dollars to euros.,Kokoro-82M,af_heart,af_heart\Currency\169.wav,generated
+170,Currency,"The salary is ¥300,000 per year.",The salary is three hundred thousand yen per year.,Kokoro-82M,af_heart,af_heart\Currency\170.wav,generated
+171,Currency,The budget is $1 million.,The budget is one million dollars.,Kokoro-82M,af_heart,af_heart\Currency\171.wav,generated
+172,Currency,The fine is €50.,The fine is fifty euros.,Kokoro-82M,af_heart,af_heart\Currency\172.wav,generated
+173,Currency,"The savings account has £10,000.",The savings account has ten thousand pounds.,Kokoro-82M,af_heart,af_heart\Currency\173.wav,generated
+174,Currency,The painting sold for $2.5 million.,The painting sold for two point five million dollars.,Kokoro-82M,af_heart,af_heart\Currency\174.wav,generated
+175,Currency,"The loan is for ¥1,000,000.",The loan is for one million yen.,Kokoro-82M,af_heart,af_heart\Currency\175.wav,generated
+176,Currency,The refund is $19.95.,The refund is nineteen dollars and ninety five cents.,Kokoro-82M,af_heart,af_heart\Currency\176.wav,generated
+177,Currency,The fare is ₩2500.,The fare is two thousand five hundred won.,Kokoro-82M,af_heart,af_heart\Currency\177.wav,generated
+178,Currency,"The prize is €1,000.",The prize is one thousand euros.,Kokoro-82M,af_heart,af_heart\Currency\178.wav,generated
+179,Currency,The debt is £500.,The debt is five hundred pounds.,Kokoro-82M,af_heart,af_heart\Currency\179.wav,generated
+180,Currency,"The investment is $50,000.",The investment is fifty thousand dollars.,Kokoro-82M,af_heart,af_heart\Currency\180.wav,generated
+181,Unit,The box weighs 5 kg.,The box weighs five kilograms.,Kokoro-82M,af_heart,af_heart\Unit\181.wav,generated
+182,Unit,The distance is 10 miles.,The distance is ten miles.,Kokoro-82M,af_heart,af_heart\Unit\182.wav,generated
+183,Unit,The bottle holds 2 liters.,The bottle holds two liters.,Kokoro-82M,af_heart,af_heart\Unit\183.wav,generated
+184,Unit,The room is 15 feet wide.,The room is fifteen feet wide.,Kokoro-82M,af_heart,af_heart\Unit\184.wav,generated
+185,Unit,The speed limit is 60 mph.,The speed limit is sixty miles per hour.,Kokoro-82M,af_heart,af_heart\Unit\185.wav,generated
+186,Unit,The temperature is 20°C.,The temperature is twenty degrees Celsius.,Kokoro-82M,af_heart,af_heart\Unit\186.wav,generated
+187,Unit,The area is 500 square meters.,The area is five hundred square meters.,Kokoro-82M,af_heart,af_heart\Unit\187.wav,generated
+188,Unit,The package is 3 inches thick.,The package is three inches thick.,Kokoro-82M,af_heart,af_heart\Unit\188.wav,generated
+189,Unit,The pool is 25 meters long.,The pool is twenty five meters long.,Kokoro-82M,af_heart,af_heart\Unit\189.wav,generated
+190,Unit,The pressure is 100 kPa.,The pressure is one hundred kilopascals.,Kokoro-82M,af_heart,af_heart\Unit\190.wav,generated
+191,Unit,The height is 6 feet 2 inches.,The height is six feet two inches.,Kokoro-82M,af_heart,af_heart\Unit\191.wav,generated
+192,Unit,The dosage is 250 mg.,The dosage is two hundred fifty milligrams.,Kokoro-82M,af_heart,af_heart\Unit\192.wav,generated
+193,Unit,The volume is 1.5 gallons.,The volume is one point five gallons.,Kokoro-82M,af_heart,af_heart\Unit\193.wav,generated
+194,Unit,The cable is 10 cm long.,The cable is ten centimeters long.,Kokoro-82M,af_heart,af_heart\Unit\194.wav,generated
+195,Unit,The energy output is 50 kW.,The energy output is fifty kilowatts.,Kokoro-82M,af_heart,af_heart\Unit\195.wav,generated
+196,Unit,The rainfall was 2 inches.,The rainfall was two inches.,Kokoro-82M,af_heart,af_heart\Unit\196.wav,generated
+197,Unit,The weight limit is 50 lbs.,The weight limit is fifty pounds.,Kokoro-82M,af_heart,af_heart\Unit\197.wav,generated
+198,Unit,The screen is 24 inches diagonally.,The screen is twenty four inches diagonally.,Kokoro-82M,af_heart,af_heart\Unit\198.wav,generated
+199,Unit,The capacity is 5 tons.,The capacity is five tons.,Kokoro-82M,af_heart,af_heart\Unit\199.wav,generated
+200,Unit,The wavelength is 550 nm.,The wavelength is five hundred fifty nanometers.,Kokoro-82M,af_heart,af_heart\Unit\200.wav,generated
+201,Sports score,The final score was 3-1.,The final score was three to one.,Kokoro-82M,af_heart,af_heart\Sports_score\201.wav,generated
+202,Sports score,The game ended 24-21.,The game ended twenty four to twenty one.,Kokoro-82M,af_heart,af_heart\Sports_score\202.wav,generated
+203,Sports score,The team won 7-0.,The team won seven to zero.,Kokoro-82M,af_heart,af_heart\Sports_score\203.wav,generated
+204,Sports score,The match was tied 2-2.,The match was tied two to two.,Kokoro-82M,af_heart,af_heart\Sports_score\204.wav,generated
+205,Sports score,The score is 14-10 in the third quarter.,The score is fourteen to ten in the third quarter.,Kokoro-82M,af_heart,af_heart\Sports_score\205.wav,generated
+206,Sports score,The basketball game was 98-95.,The basketball game was ninety eight to ninety five.,Kokoro-82M,af_heart,af_heart\Sports_score\206.wav,generated
+207,Sports score,The soccer match ended 1-0.,The soccer match ended one to zero.,Kokoro-82M,af_heart,af_heart\Sports_score\207.wav,generated
+208,Sports score,The tennis set was 6-4.,The tennis set was six to four.,Kokoro-82M,af_heart,af_heart\Sports_score\208.wav,generated
+209,Sports score,The hockey score was 5-3.,The hockey score was five to three.,Kokoro-82M,af_heart,af_heart\Sports_score\209.wav,generated
+210,Sports score,The baseball game was 4-2.,The baseball game was four to two.,Kokoro-82M,af_heart,af_heart\Sports_score\210.wav,generated
+211,Sports score,The football score is 28-14.,The football score is twenty eight to fourteen.,Kokoro-82M,af_heart,af_heart\Sports_score\211.wav,generated
+212,Sports score,The volleyball set was 25-23.,The volleyball set was twenty five to twenty three.,Kokoro-82M,af_heart,af_heart\Sports_score\212.wav,generated
+213,Sports score,The rugby match ended 17-12.,The rugby match ended seventeen to twelve.,Kokoro-82M,af_heart,af_heart\Sports_score\213.wav,generated
+214,Sports score,The cricket score was 320-6.,The cricket score was three hundred twenty for six.,Kokoro-82M,af_heart,af_heart\Sports_score\214.wav,generated
+215,Sports score,The badminton game was 21-19.,The badminton game was twenty one to nineteen.,Kokoro-82M,af_heart,af_heart\Sports_score\215.wav,generated
+216,Sports score,The boxing match was scored 116-112.,The boxing match was scored one hundred sixteen to one hundred twelve.,Kokoro-82M,af_heart,af_heart\Sports_score\216.wav,generated
+217,Sports score,The golf score was 3 under par.,The golf score was three under par.,Kokoro-82M,af_heart,af_heart\Sports_score\217.wav,generated
+218,Sports score,The final result was 10-7-3.,The final result was ten seven three.,Kokoro-82M,af_heart,af_heart\Sports_score\218.wav,generated
+219,Sports score,The race time was 2:15:30.,The race time was two hours fifteen minutes thirty seconds.,Kokoro-82M,af_heart,af_heart\Sports_score\219.wav,generated
+220,Sports score,The swimming record is 52.43 seconds.,The swimming record is fifty two point four three seconds.,Kokoro-82M,af_heart,af_heart\Sports_score\220.wav,generated
+221,Mathematical Expression,The equation is 2 + 2 = 4.,The equation is two plus two equals four.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\221.wav,generated
+222,Mathematical Expression,The result of 10 ÷ 2 is 5.,The result of ten divided by two is five.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\222.wav,generated
+223,Mathematical Expression,The formula is x² + y² = z².,The formula is x squared plus y squared equals z squared.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\223.wav,generated
+224,Mathematical Expression,The calculation is 7 × 8 = 56.,The calculation is seven times eight equals fifty six.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\224.wav,generated
+225,Mathematical Expression,The expression √16 = 4.,The expression square root of sixteen equals four.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\225.wav,generated
+226,Mathematical Expression,The inequality is 3 < 5.,The inequality is three is less than five.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\226.wav,generated
+227,Mathematical Expression,The sum of 1 + 1 is 2.,The sum of one plus one is two.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\227.wav,generated
+228,Mathematical Expression,The product of 6 × 9 is 54.,The product of six times nine is fifty four.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\228.wav,generated
+229,Mathematical Expression,The fraction ½ equals 0.5.,The fraction one half equals zero point five.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\229.wav,generated
+230,Mathematical Expression,The equation 3x + 5 = 14.,The equation three x plus five equals fourteen.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\230.wav,generated
+231,Mathematical Expression,The value of π is approximately 3.14.,The value of pi is approximately three point one four.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\231.wav,generated
+232,Mathematical Expression,The exponent is 2³ = 8.,The exponent is two cubed equals eight.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\232.wav,generated
+233,Mathematical Expression,The ratio is 4:3.,The ratio is four to three.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\233.wav,generated
+234,Mathematical Expression,The percentage is 25%.,The percentage is twenty five percent.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\234.wav,generated
+235,Mathematical Expression,The average is (5 + 10 + 15) ÷ 3 = 10.,The average is five plus ten plus fifteen divided by three equals ten.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\235.wav,generated
+236,Mathematical Expression,The derivative of x² is 2x.,The derivative of x squared is two x.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\236.wav,generated
+237,Mathematical Expression,The integral of 2x is x² + C.,The integral of two x is x squared plus C.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\237.wav,generated
+238,Mathematical Expression,The probability is 1 in 6.,The probability is one in six.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\238.wav,generated
+239,Mathematical Expression,The slope is Δy/Δx.,The slope is delta y over delta x.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\239.wav,generated
+240,Mathematical Expression,The limit as x approaches 0 is 1.,The limit as x approaches zero is one.,Kokoro-82M,af_heart,af_heart\Mathematical_Expression\240.wav,generated
+241,URL or Email,Visit https://www.example.com.,Visit h t t p s colon slash slash w w w dot example dot com.,Kokoro-82M,af_heart,af_heart\URL_or_Email\241.wav,generated
+242,URL or Email,Email me at john.doe@example.com.,Email me at john dot doe at example dot com.,Kokoro-82M,af_heart,af_heart\URL_or_Email\242.wav,generated
+243,URL or Email,The website is http://test.org.,The website is h t t p colon slash slash test dot org.,Kokoro-82M,af_heart,af_heart\URL_or_Email\243.wav,generated
+244,URL or Email,Check out https://news.bbc.co.uk.,Check out h t t p s colon slash slash news dot b b c dot co dot u k.,Kokoro-82M,af_heart,af_heart\URL_or_Email\244.wav,generated
+245,URL or Email,Contact support@company.com.,Contact support at company dot com.,Kokoro-82M,af_heart,af_heart\URL_or_Email\245.wav,generated
+246,URL or Email,The link is www.website.net.,The link is w w w dot website dot net.,Kokoro-82M,af_heart,af_heart\URL_or_Email\246.wav,generated
+247,URL or Email,Follow us on twitter.com/username.,Follow us on twitter dot com slash username.,Kokoro-82M,af_heart,af_heart\URL_or_Email\247.wav,generated
+248,URL or Email,The portal is at https://login.example.org.,The portal is at h t t p s colon slash slash login dot example dot org.,Kokoro-82M,af_heart,af_heart\URL_or_Email\248.wav,generated
+249,URL or Email,Send files to ftp://ftp.server.com.,Send files to f t p colon slash slash f t p dot server dot com.,Kokoro-82M,af_heart,af_heart\URL_or_Email\249.wav,generated
+250,URL or Email,Visit https://www.mediacityuk.co.uk.,Visit h t t p s colon slash slash media city u k dot co dot u k.,Kokoro-82M,af_heart,af_heart\URL_or_Email\250.wav,generated
+251,URL or Email,Visit example.com/page1.,Visit example dot com slash page one.,Kokoro-82M,af_heart,af_heart\URL_or_Email\251.wav,generated
+252,URL or Email,The blog is at blog.site.io.,The blog is at blog dot site dot i o.,Kokoro-82M,af_heart,af_heart\URL_or_Email\252.wav,generated
+253,URL or Email,Subscribe at newsletter@service.com.,Subscribe at newsletter at service dot com.,Kokoro-82M,af_heart,af_heart\URL_or_Email\253.wav,generated
+254,URL or Email,The download link is bit.ly/123abc.,The download link is bit dot l y slash one two three a b c.,Kokoro-82M,af_heart,af_heart\URL_or_Email\254.wav,generated
+255,URL or Email,The forum is forum.example.org.,The forum is forum dot example dot org.,Kokoro-82M,af_heart,af_heart\URL_or_Email\255.wav,generated
+256,URL or Email,The API docs are at api.dev/v2.,The A P I docs are at a p i dot dev slash v two.,Kokoro-82M,af_heart,af_heart\URL_or_Email\256.wav,generated
+257,URL or Email,Email feedback to contact@site.gov.,Email feedback to contact at site dot gov.,Kokoro-82M,af_heart,af_heart\URL_or_Email\257.wav,generated
+258,URL or Email,The repository is github.com/user/repo.,The repository is github dot com slash user slash repo.,Kokoro-82M,af_heart,af_heart\URL_or_Email\258.wav,generated
+259,URL or Email,The login page is secure.login.example.,The login page is secure dot login dot example.,Kokoro-82M,af_heart,af_heart\URL_or_Email\259.wav,generated
+260,URL or Email,The support email is help@service.io.,The support email is help at service dot i o.,Kokoro-82M,af_heart,af_heart\URL_or_Email\260.wav,generated
+261,Hashtag or Mention,Follow #TravelTips for advice.,Follow hashtag travel tips for advice.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\261.wav,generated
+262,Hashtag or Mention,The trend is #ThrowbackThursday.,The trend is hashtag throwback thursday.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\262.wav,generated
+263,Hashtag or Mention,Mention @username in your post.,Mention at username in your post.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\263.wav,generated
+264,Hashtag or Mention,Join the conversation with #ClimateChange.,Join the conversation with hashtag climate change.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\264.wav,generated
+265,Hashtag or Mention,Tag @officialpage for features.,Tag at official page for features.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\265.wav,generated
+266,Hashtag or Mention,The campaign uses #SaveThePlanet.,The campaign uses hashtag save the planet.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\266.wav,generated
+267,Hashtag or Mention,Reply to @customer_support.,Reply to at customer support.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\267.wav,generated
+268,Hashtag or Mention,The event hashtag is #TechConf2023.,The event hashtag is hashtag tech conf twenty twenty three.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\268.wav,generated
+269,Hashtag or Mention,Follow @news for updates.,Follow at news for updates.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\269.wav,generated
+270,Hashtag or Mention,The challenge is #30DayFitness.,The challenge is hashtag thirty day fitness.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\270.wav,generated
+271,Hashtag or Mention,Share your story with #MyJourney.,Share your story with hashtag my journey.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\271.wav,generated
+272,Hashtag or Mention,The winner is @user123.,The winner is at user one two three.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\272.wav,generated
+273,Hashtag or Mention,Use #Foodie for restaurant reviews.,Use hashtag foodie for restaurant reviews.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\273.wav,generated
+274,Hashtag or Mention,The poll is by @survey_team.,The poll is by at survey team.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\274.wav,generated
+275,Hashtag or Mention,The movement is #GoGreen.,The movement is hashtag go green.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\275.wav,generated
+276,Hashtag or Mention,Tag @friends in your photos.,Tag at friends in your photos.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\276.wav,generated
+277,Hashtag or Mention,The contest uses #PhotoOfTheDay.,The contest uses hashtag photo of the day.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\277.wav,generated
+278,Hashtag or Mention,Follow @influencer for tips.,Follow at influencer for tips.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\278.wav,generated
+279,Hashtag or Mention,The community is #BookLovers.,The community is hashtag book lovers.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\279.wav,generated
+280,Hashtag or Mention,Reply with #YesOrNo.,Reply with hashtag yes or no.,Kokoro-82M,af_heart,af_heart\Hashtag_or_Mention\280.wav,generated
+281,Abbreviation,Dr. Smith will see you now.,Doctor Smith will see you now.,Kokoro-82M,af_heart,af_heart\Abbreviation\281.wav,generated
+282,Abbreviation,,,Kokoro-82M,af_heart,af_heart\Abbreviation\282.wav,error: Kokoro returned no audio.
+283,Abbreviation,Prof. Johnson teaches biology.,Professor Johnson teaches biology.,Kokoro-82M,af_heart,af_heart\Abbreviation\283.wav,generated
+284,Abbreviation,The store is on Main St.,The store is on Main Street.,Kokoro-82M,af_heart,af_heart\Abbreviation\284.wav,generated
+285,Abbreviation,St. Patrick's Day is a public holiday in Ireland.,Saint Patrick's Day is a public holiday in Ireland.,Kokoro-82M,af_heart,af_heart\Abbreviation\285.wav,generated
+286,Abbreviation,Mr. and Mrs. Jones are having a heated argument.,Mister and Missus Jones are having a heated argument.,Kokoro-82M,af_heart,af_heart\Abbreviation\286.wav,generated
+287,Abbreviation,The document is from Jan. 2023.,The document is from January twenty twenty three.,Kokoro-82M,af_heart,af_heart\Abbreviation\287.wav,generated
+288,Abbreviation,"He bought a used car, incl. insurance.","He bought a used car, including insurance.",Kokoro-82M,af_heart,af_heart\Abbreviation\288.wav,generated
+289,Abbreviation,The lab is run by Dr. Lee.,The lab is run by Doctor Lee.,Kokoro-82M,af_heart,af_heart\Abbreviation\289.wav,generated
+290,Abbreviation,The office is on 5th Ave.,The office is on Fifth Avenue.,Kokoro-82M,af_heart,af_heart\Abbreviation\290.wav,generated
+291,Abbreviation,The recipe requires 2 tsp salt.,The recipe requires two teaspoons salt.,Kokoro-82M,af_heart,af_heart\Abbreviation\291.wav,generated
+292,Abbreviation,The conference is in Dec.,The conference is in December.,Kokoro-82M,af_heart,af_heart\Abbreviation\292.wav,generated
+293,Abbreviation,"Johnson & Co., Inc. is expanding overseas.",Johnson and Company Inc is expanding overseas.,Kokoro-82M,af_heart,af_heart\Abbreviation\293.wav,generated
+294,Abbreviation,The book was written by J.K. Rowling.,The book was written by J K Rowling.,Kokoro-82M,af_heart,af_heart\Abbreviation\294.wav,generated
+295,Abbreviation,The meeting will last approx. 45 min.,The meeting will last approximately forty five minutes.,Kokoro-82M,af_heart,af_heart\Abbreviation\295.wav,generated
+296,Abbreviation,The game tonight is Lakers vs. Celtics.,The game tonight is Lakers versus Celtics.,Kokoro-82M,af_heart,af_heart\Abbreviation\296.wav,generated
+297,Abbreviation,The bottle holds 12 oz.,The bottle holds twelve ounces.,Kokoro-82M,af_heart,af_heart\Abbreviation\297.wav,generated
+298,Abbreviation,"The event is on Fri., Nov. 10.",The event is on Friday November tenth.,Kokoro-82M,af_heart,af_heart\Abbreviation\298.wav,generated
+299,Abbreviation,The doctor's name is Dr. Brown.,The doctor's name is Doctor Brown.,Kokoro-82M,af_heart,af_heart\Abbreviation\299.wav,generated
+300,Abbreviation,The meeting is in Rm. 205.,The meeting is in Room two zero five.,Kokoro-82M,af_heart,af_heart\Abbreviation\300.wav,generated
+301,Initialism or Acronym,The USA won the gold medal.,The U S A won the gold medal.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\301.wav,generated
+302,Initialism or Acronym,She works at the FBI.,She works at the F B I.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\302.wav,generated
+303,Initialism or Acronym,The event is sponsored by NASA.,The event is sponsored by Nasa.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\303.wav,generated
+304,Initialism or Acronym,The report was filed with the IRS.,The report was filed with the I R S.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\304.wav,generated
+305,Initialism or Acronym,The CIA operates overseas.,The C I A operates overseas.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\305.wav,generated
+306,Initialism or Acronym,The UN held a meeting.,The U N held a meeting.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\306.wav,generated
+307,Initialism or Acronym,The DJ played great music.,The D J played great music.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\307.wav,generated
+308,Initialism or Acronym,The CEO announced a new policy.,The C E O announced a new policy.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\308.wav,generated
+309,Initialism or Acronym,The ATM is out of service.,The A T M is out of service.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\309.wav,generated
+310,Initialism or Acronym,The EU passed new regulations.,The E U passed new regulations.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\310.wav,generated
+311,Initialism or Acronym,The UK left the EU.,The U K left the E U.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\311.wav,generated
+312,Initialism or Acronym,The FDA approved the drug.,The F D A approved the drug.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\312.wav,generated
+313,Initialism or Acronym,The CD was scratched.,The C D was scratched.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\313.wav,generated
+314,Initialism or Acronym,The BBC reported the news.,The B B C reported the news.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\314.wav,generated
+315,Initialism or Acronym,The PC crashed.,The P C crashed.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\315.wav,generated
+316,Initialism or Acronym,The UFO sighting was unexplained.,The U F O sighting was unexplained.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\316.wav,generated
+317,Initialism or Acronym,The DVD is still in the machine.,The D V D is still in the machine.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\317.wav,generated
+318,Initialism or Acronym,The NFL season starts soon.,The NFL season starts soon.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\318.wav,generated
+319,Initialism or Acronym,The AI system is learning.,The A I system is learning.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\319.wav,generated
+320,Initialism or Acronym,The GPS guided us home.,The G P S guided us home.,Kokoro-82M,af_heart,af_heart\Initialism_or_Acronym\320.wav,generated
+321,ISBN,The ISBN is 978-3-16-148410-0.,The I S B N is nine seven eight three one six one four eight four one zero zero.,Kokoro-82M,af_heart,af_heart\ISBN\321.wav,generated
+322,ISBN,The book's ISBN-13 is 978-0-13-468599-1.,The book's I S B N thirteen is nine seven eight zero one three four six eight five nine nine one.,Kokoro-82M,af_heart,af_heart\ISBN\322.wav,generated
+323,ISBN,The ISBN-10 is 0-306-40615-2.,The I S B N ten is zero three zero six four zero six one five two.,Kokoro-82M,af_heart,af_heart\ISBN\323.wav,generated
+324,ISBN,Check the ISBN 978-1-56619-909-4.,Check the I S B N nine seven eight one five six six one nine nine zero nine four.,Kokoro-82M,af_heart,af_heart\ISBN\324.wav,generated
+325,ISBN,The ISBN for the manual is 978-0-7356-4871-9.,The I S B N for the manual is nine seven eight zero seven three five six four eight seven one nine.,Kokoro-82M,af_heart,af_heart\ISBN\325.wav,generated
+326,ISBN,The ISBN-13: 978-1-4028-9462-6.,The I S B N thirteen: nine seven eight one four zero two eight nine four six two six.,Kokoro-82M,af_heart,af_heart\ISBN\326.wav,generated
+327,ISBN,The reference ISBN is 0-201-63361-2.,The reference I S B N is zero two zero one six three three six one two.,Kokoro-82M,af_heart,af_heart\ISBN\327.wav,generated
+328,ISBN,The textbook's ISBN is 978-0-321-96551-4.,The textbook's I S B N is nine seven eight zero three two one nine six five five one four.,Kokoro-82M,af_heart,af_heart\ISBN\328.wav,generated
+329,ISBN,The ISBN-10: 1-56619-909-3.,The I S B N ten: one five six six one nine nine zero nine three.,Kokoro-82M,af_heart,af_heart\ISBN\329.wav,generated
+330,ISBN,The novel's ISBN is 978-0-7432-7356-5.,The novel's I S B N is nine seven eight zero seven four three two seven three five six five.,Kokoro-82M,af_heart,af_heart\ISBN\330.wav,generated
+331,ISBN,The ISBN 978-0-262-03384-8 is valid.,The I S B N nine seven eight zero two six two zero three three eight four eight is valid.,Kokoro-82M,af_heart,af_heart\ISBN\331.wav,generated
+332,ISBN,The ISBN-13: 978-1-59059-811-1.,The I S B N thirteen: nine seven eight one five nine zero five nine eight one one one.,Kokoro-82M,af_heart,af_heart\ISBN\332.wav,generated
+333,ISBN,The ISBN-10 is 0-7475-3269-9.,The I S B N ten is zero seven four seven five three two six nine nine.,Kokoro-82M,af_heart,af_heart\ISBN\333.wav,generated
+334,ISBN,The ISBN 978-0-385-50420-5 is correct.,The I S B N nine seven eight zero three eight five five zero four two zero five is correct.,Kokoro-82M,af_heart,af_heart\ISBN\334.wav,generated
+335,ISBN,The ISBN-13: 978-0-399-15559-7.,The I S B N thirteen: nine seven eight zero three nine nine one five five five nine seven.,Kokoro-82M,af_heart,af_heart\ISBN\335.wav,generated
+336,ISBN,The ISBN-10: 0-385-50420-9.,The I S B N ten: zero three eight five five zero four two zero nine.,Kokoro-82M,af_heart,af_heart\ISBN\336.wav,generated
+337,ISBN,The ISBN 978-0-545-01022-1 is assigned.,The I S B N nine seven up zero five four five zero one zero two two one is assigned.,Kokoro-82M,af_heart,af_heart\ISBN\337.wav,generated
+338,ISBN,The ISBN-13 is 978-0-06-112008-4.,The I S B N thirteen is nine seven eight zero zero six one one two zero zero eight four.,Kokoro-82M,af_heart,af_heart\ISBN\338.wav,generated
+339,ISBN,The ISBN-10 is 0-06-112008-1.,The I S B N ten is zero zero six one one two zero zero eight one.,Kokoro-82M,af_heart,af_heart\ISBN\339.wav,generated
+340,ISBN,The ISBN 978-0-14-303995-0 is registered.,The I S B N nine seven eight zero one four three zero three nine nine five zero is registered.,Kokoro-82M,af_heart,af_heart\ISBN\340.wav,generated
+341,Chemical Formula,Water is H₂O.,Water is H two O.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\341.wav,generated
+342,Chemical Formula,The formula for salt is NaCl.,The formula for salt is N a C l.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\342.wav,generated
+343,Chemical Formula,Carbon dioxide is CO₂.,Carbon dioxide is C O two.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\343.wav,generated
+344,Chemical Formula,Glucose is C₆H₁₂O₆.,Glucose is C six H twelve O six.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\344.wav,generated
+345,Chemical Formula,Sulfuric acid is H₂SO₄.,Sulfuric acid is H two S O four.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\345.wav,generated
+346,Chemical Formula,Methane is CH₄.,Methane is C H four.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\346.wav,generated
+347,Chemical Formula,Ammonia is NH₃.,Ammonia is N H three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\347.wav,generated
+348,Chemical Formula,Ethanol is C₂H₅OH.,Ethanol is C two H five O H.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\348.wav,generated
+349,Chemical Formula,Hydrogen peroxide is H₂O₂.,Hydrogen peroxide is H two O two.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\349.wav,generated
+350,Chemical Formula,Calcium carbonate is CaCO₃.,Calcium carbonate is C a C O three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\350.wav,generated
+351,Chemical Formula,Nitric acid is HNO₃.,Nitric acid is H N O three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\351.wav,generated
+352,Chemical Formula,Ozone is O₃.,Ozone is O three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\352.wav,generated
+353,Chemical Formula,The formula for rust is Fe₂O₃.,The formula for rust is F e two O three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\353.wav,generated
+354,Chemical Formula,Benzene is C₆H₆.,Benzene is C six H six.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\354.wav,generated
+355,Chemical Formula,Acetic acid is CH₃COOH.,Acetic acid is C H three C O O H.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\355.wav,generated
+356,Chemical Formula,Sodium bicarbonate is NaHCO₃.,Sodium bicarbonate is N a H C O three.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\356.wav,generated
+357,Chemical Formula,Propane is C₃H₈.,Propane is C three H eight.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\357.wav,generated
+358,Chemical Formula,The formula for quartz is SiO₂.,The formula for quartz is S i O two.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\358.wav,generated
+359,Chemical Formula,Hydrochloric acid is HCl.,Hydrochloric acid is H C l.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\359.wav,generated
+360,Chemical Formula,The formula for aspirin is C₉H₈O₄.,The formula for aspirin is C nine H eight O four.,Kokoro-82M,af_heart,af_heart\Chemical_Formula\360.wav,generated
+361,Legal Reference,See Section 5.2 of the contract.,See Section five point two of the contract.,Kokoro-82M,af_heart,af_heart\Legal_Reference\361.wav,generated
+362,Legal Reference,The case was filed under No. 2023-CV-1234.,The case was filed under Number twenty twenty three dash C V dash one two three four.,Kokoro-82M,af_heart,af_heart\Legal_Reference\362.wav,generated
+363,Legal Reference,"Refer to Article III, Clause 4.","Refer to Article three, Clause four.",Kokoro-82M,af_heart,af_heart\Legal_Reference\363.wav,generated
+364,Legal Reference,The statute is codified as 42 U.S.C. § 1983.,The statute is codified as forty two U S C section nineteen eighty three.,Kokoro-82M,af_heart,af_heart\Legal_Reference\364.wav,generated
+365,Legal Reference,The regulation is 15 CFR Part 12.,The regulation is fifteen C F R Part twelve.,Kokoro-82M,af_heart,af_heart\Legal_Reference\365.wav,generated
+366,Legal Reference,The ruling was in Case No. 99-12345.,The ruling was in Case Number ninety nine dash one two three four five.,Kokoro-82M,af_heart,af_heart\Legal_Reference\366.wav,generated
+367,Legal Reference,The amendment is the 14th Amendment.,The amendment is the fourteenth Amendment.,Kokoro-82M,af_heart,af_heart\Legal_Reference\367.wav,generated
+368,Legal Reference,The provision is in Paragraph 7(b).,The provision is in Paragraph seven b.,Kokoro-82M,af_heart,af_heart\Legal_Reference\368.wav,generated
+369,Legal Reference,The citation is 123 F.3d 456 (1999).,The citation is one twenty three F three d four five six nineteen ninety nine.,Kokoro-82M,af_heart,af_heart\Legal_Reference\369.wav,generated
+370,Legal Reference,The law is Public Law 107-296.,The law is Public Law one oh seven dash two nine six.,Kokoro-82M,af_heart,af_heart\Legal_Reference\370.wav,generated
+371,Legal Reference,The order is Docket No. 2022-5678.,The order is Docket Number twenty twenty two dash five six seven eight.,Kokoro-82M,af_heart,af_heart\Legal_Reference\371.wav,generated
+372,Legal Reference,The rule is found in 29 CFR § 1910.120.,The rule is found in twenty nine C F R section nineteen ten point one twenty.,Kokoro-82M,af_heart,af_heart\Legal_Reference\372.wav,generated
+373,Legal Reference,The judgment is Case No. 1:22-cv-00123.,The judgment is Case Number one colon twenty two dash C V dash zero zero one two three.,Kokoro-82M,af_heart,af_heart\Legal_Reference\373.wav,generated
+374,Legal Reference,The code is California Penal Code § 187.,The code is California Penal Code section one eighty seven.,Kokoro-82M,af_heart,af_heart\Legal_Reference\374.wav,generated
+375,Legal Reference,The decision is 543 U.S. 551 (2005).,The decision is five forty three U S five fifty one two thousand five.,Kokoro-82M,af_heart,af_heart\Legal_Reference\375.wav,generated
+376,Legal Reference,The act is the Sarbanes-Oxley Act of 2002.,The act is the Sarbanes-Oxley Act of two thousand two.,Kokoro-82M,af_heart,af_heart\Legal_Reference\376.wav,generated
+377,Legal Reference,"The reference is to Title 18, U.S. Code.","The reference is to Title eighteen, U S Code.",Kokoro-82M,af_heart,af_heart\Legal_Reference\377.wav,generated
+378,Legal Reference,The filing is Document No. 45-6789.,The filing is Document Number forty five dash six seven eight nine.,Kokoro-82M,af_heart,af_heart\Legal_Reference\378.wav,generated
+379,Legal Reference,The regulation is 40 CFR Part 60.,The regulation is forty C F R Part sixty.,Kokoro-82M,af_heart,af_heart\Legal_Reference\379.wav,generated
+380,Legal Reference,"The case is Smith v. Jones, 123 F.2d 456.","The case is Smith versus Jones, one twenty three F two d four five six.",Kokoro-82M,af_heart,af_heart\Legal_Reference\380.wav,generated
+381,Vehicle or Product Code,The model number is ABC-1234.,The model number is A B C one two three four.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\381.wav,generated
+382,Vehicle or Product Code,The VIN is 1HGCM82633A123456.,The vin is one H G C M eight two six three three A one two three four five six.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\382.wav,generated
+383,Vehicle or Product Code,The serial number is SN-987654.,The serial number is S N nine eight seven six five four.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\383.wav,generated
+384,Vehicle or Product Code,The product code is PC-456-789.,The product code is P C four five six seven eight nine.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\384.wav,generated
+385,Vehicle or Product Code,The chassis number is CH-123-XYZ.,The chassis number is C H one two three X Y Z.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\385.wav,generated
+386,Vehicle or Product Code,The part number is P/N 7890-12.,The part number is P N seven eight nine zero one two.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\386.wav,generated
+387,Vehicle or Product Code,The batch code is BC-2023-05.,The batch code is B C twenty twenty three zero five.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\387.wav,generated
+388,Vehicle or Product Code,The SKU is SKU-345-678.,The S K U is S K U three four five six seven eight.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\388.wav,generated
+389,Vehicle or Product Code,The engine number is ENG-789012.,The engine number is E N G seven eight nine zero one two.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\389.wav,generated
+390,Vehicle or Product Code,The order number is ORD-456789.,The order number is O R D four five six seven eight nine.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\390.wav,generated
+391,Vehicle or Product Code,The barcode is 123456789012.,The barcode is one two three four five six seven eight nine zero one two.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\391.wav,generated
+392,Vehicle or Product Code,The reference code is REF-789-123.,The reference code is R E F seven eight nine one two three.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\392.wav,generated
+393,Vehicle or Product Code,The warranty code is WC-2025-12.,The warranty code is W C twenty twenty five one two.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\393.wav,generated
+394,Vehicle or Product Code,The registration number is REG-7890-AB.,The registration number is R E G seven eight nine zero A B.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\394.wav,generated
+395,Vehicle or Product Code,The lot number is LOT-456-2023.,The lot number is L O T four five six twenty twenty three.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\395.wav,generated
+396,Vehicle or Product Code,The device ID is DID-123-XYZ.,The device I D is D I D one two three X Y Z.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\396.wav,generated
+397,Vehicle or Product Code,The catalog number is CAT-789-456.,The catalog number is C A T seven eight nine four five six.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\397.wav,generated
+398,Vehicle or Product Code,The revision code is REV-2.0.,The revision code is R E V two point zero.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\398.wav,generated
+399,Vehicle or Product Code,The tracking number is TRK-12345678.,The tracking number is T R K one two three four five six seven eight.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\399.wav,generated
+400,Vehicle or Product Code,The firmware version is FW-1.2.3.,The firmware version is F W one point two point three.,Kokoro-82M,af_heart,af_heart\Vehicle_or_Product_Code\400.wav,generated
+401,Geographic Coordinates,"The location is 40.7128° N, 74.0060° W.","The location is forty point seven one two eight degrees north, seventy four point zero zero six zero degrees west.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\401.wav,generated
+402,Geographic Coordinates,"The coordinates are 34.0522° S, 118.2437° E.","The coordinates are thirty four point zero five two two degrees south, one hundred eighteen point two four three seven degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\402.wav,generated
+403,Geographic Coordinates,The latitude is 51.5074° N.,The latitude is fifty one point five zero seven four degrees north.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\403.wav,generated
+404,Geographic Coordinates,The longitude is 0.1278° W.,The longitude is zero point one two seven eight degrees west.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\404.wav,generated
+405,Geographic Coordinates,"The GPS shows 35.6895° N, 139.6917° E.","The G P S shows thirty five point six eight nine five degrees north, one hundred thirty nine point six nine one seven degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\405.wav,generated
+406,Geographic Coordinates,"The map points to 48.8566° N, 2.3522° E.","The map points to forty eight point eight five six six degrees north, two point three five two two degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\406.wav,generated
+407,Geographic Coordinates,"The site is at 19.4326° N, 99.1332° W.","The site is at nineteen point four three two six degrees north, ninety nine point one three three two degrees west.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\407.wav,generated
+408,Geographic Coordinates,"The coordinates are 41.9028° N, 12.4964° E.","The coordinates are forty one point nine zero two eight degrees north, twelve point four nine six four degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\408.wav,generated
+409,Geographic Coordinates,The latitude is 37.7749° N.,The latitude is thirty seven point seven seven four nine degrees north.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\409.wav,generated
+410,Geographic Coordinates,The longitude is 122.4194° W.,The longitude is one hundred twenty two point four one nine four degrees west.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\410.wav,generated
+411,Geographic Coordinates,"The location is 55.7558° N, 37.6173° E.","The location is fifty five point seven five five eight degrees north, thirty seven point six one seven three degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\411.wav,generated
+412,Geographic Coordinates,"The GPS reads 22.3964° N, 114.1095° E.","The G P S reads twenty two point three nine six four degrees north, one hundred fourteen point one zero nine five degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\412.wav,generated
+413,Geographic Coordinates,"The coordinates are 52.5200° N, 13.4050° E.","The coordinates are fifty two point five two zero zero degrees north, thirteen point four zero five zero degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\413.wav,generated
+414,Geographic Coordinates,"The site is at 1.3521° N, 103.8198° E.","The site is at one point three five two one degrees north, one hundred three point eight one nine eight degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\414.wav,generated
+415,Geographic Coordinates,The latitude is 39.9042° N.,The latitude is thirty nine point nine zero four two degrees north.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\415.wav,generated
+416,Geographic Coordinates,The longitude is 116.4074° E.,The longitude is one hundred sixteen point four zero seven four degrees east.,Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\416.wav,generated
+417,Geographic Coordinates,"The location is 33.8688° S, 151.2093° E.","The location is thirty three point eight six eight eight degrees south, one hundred fifty one point two zero nine three degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\417.wav,generated
+418,Geographic Coordinates,"The coordinates are 59.3293° N, 18.0686° E.","The coordinates are fifty nine point three two nine three degrees north, eighteen point zero six eight six degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\418.wav,generated
+419,Geographic Coordinates,"The GPS shows 25.2048° N, 55.2708° E.","The G P S shows twenty five point two zero four eight degrees north, fifty five point two seven zero eight degrees east.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\419.wav,generated
+420,Geographic Coordinates,"The map points to 43.6532° N, 79.3832° W.","The map points to forty three point six five three two degrees north, seventy nine point three eight three two degrees west.",Kokoro-82M,af_heart,af_heart\Geographic_Coordinates\420.wav,generated
+421,Version Numbers,The software is version 2.0.,The software is version two point zero.,Kokoro-82M,af_heart,af_heart\Version_Numbers\421.wav,generated
+422,Version Numbers,Update to v3.1.4.,Update to version three point one point four.,Kokoro-82M,af_heart,af_heart\Version_Numbers\422.wav,generated
+423,Version Numbers,The app is on version 1.2.3.,The app is on version one point two point three.,Kokoro-82M,af_heart,af_heart\Version_Numbers\423.wav,generated
+424,Version Numbers,The firmware is v5.0.1.,The firmware is version five point zero point one.,Kokoro-82M,af_heart,af_heart\Version_Numbers\424.wav,generated
+425,Version Numbers,The latest release is 4.2.,The latest release is four point two.,Kokoro-82M,af_heart,af_heart\Version_Numbers\425.wav,generated
+426,Version Numbers,The beta version is 0.9.5.,The beta version is zero point nine point five.,Kokoro-82M,af_heart,af_heart\Version_Numbers\426.wav,generated
+427,Version Numbers,The patch is version 1.0.7.,The patch is version one point zero point seven.,Kokoro-82M,af_heart,af_heart\Version_Numbers\427.wav,generated
+428,Version Numbers,The operating system is macOS 12.5.,The operating system is macOS twelve point five.,Kokoro-82M,af_heart,af_heart\Version_Numbers\428.wav,generated
+429,Version Numbers,The driver is v6.1.2.,The driver is version six point one point two.,Kokoro-82M,af_heart,af_heart\Version_Numbers\429.wav,generated
+430,Version Numbers,The game is on version 2.3.0.,The game is on version two point three point zero.,Kokoro-82M,af_heart,af_heart\Version_Numbers\430.wav,generated
+431,Version Numbers,The library is at version 0.1.0.,The library is at version zero point one point zero.,Kokoro-82M,af_heart,af_heart\Version_Numbers\431.wav,generated
+432,Version Numbers,The stable release is v1.5.,The stable release is version one point five.,Kokoro-82M,af_heart,af_heart\Version_Numbers\432.wav,generated
+433,Version Numbers,The plugin is version 3.0.4.,The plugin is version three point zero point four.,Kokoro-82M,af_heart,af_heart\Version_Numbers\433.wav,generated
+434,Version Numbers,The SDK is v4.2.1.,The S D K is version four point two point one.,Kokoro-82M,af_heart,af_heart\Version_Numbers\434.wav,generated
+435,Version Numbers,The tool is on version 7.1.,The tool is on version seven point one.,Kokoro-82M,af_heart,af_heart\Version_Numbers\435.wav,generated
+436,Version Numbers,The update brings it to v2.6.3.,The update brings it to version two point six point three.,Kokoro-82M,af_heart,af_heart\Version_Numbers\436.wav,generated
+437,Version Numbers,The API is version 1.0.0.,The A P I is version one point zero point zero.,Kokoro-82M,af_heart,af_heart\Version_Numbers\437.wav,generated
+438,Version Numbers,The compiler is v8.3.2.,The compiler is version eight point three point two.,Kokoro-82M,af_heart,af_heart\Version_Numbers\438.wav,generated
+439,Version Numbers,The framework is on 5.1.9.,The framework is on five point one point nine.,Kokoro-82M,af_heart,af_heart\Version_Numbers\439.wav,generated
+440,Version Numbers,The release candidate is v3.2.0-rc1.,The release candidate is version three point two point zero R C one.,Kokoro-82M,af_heart,af_heart\Version_Numbers\440.wav,generated
+441,License Plate or Serial Numbers,The license plate is ABC-1234.,The license plate is A B C one two three four.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\441.wav,generated
+442,License Plate or Serial Numbers,The serial number is S/N 7890-XYZ.,The serial number is S N seven eight nine zero X Y Z.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\442.wav,generated
+443,License Plate or Serial Numbers,The VIN is 1HGBH41JXMN109186.,The vin is one H G B H four one J X M N one zero nine one eight six.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\443.wav,generated
+444,License Plate or Serial Numbers,The registration is TX-456-789.,The registration is T X four five six seven eight nine.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\444.wav,generated
+445,License Plate or Serial Numbers,The plate number is CA-7890.,The plate number is C A seven eight nine zero.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\445.wav,generated
+446,License Plate or Serial Numbers,The ID is 123-456-789.,The I D is one two three four five six seven eight nine.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\446.wav,generated
+447,License Plate or Serial Numbers,The chassis number is CH-12345678.,The chassis number is C H dash one two three four five six seven eight.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\447.wav,generated
+448,License Plate or Serial Numbers,The permit number is PER-2023-456.,The permit number is P E R dash twenty twenty three dash four five six.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\448.wav,generated
+449,License Plate or Serial Numbers,The tag is FL-ABC12.,The tag is F L A B C one two.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\449.wav,generated
+450,License Plate or Serial Numbers,The engine number is ENG-78901234.,The engine number is E N G seven eight nine zero one two three four.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\450.wav,generated
+451,License Plate or Serial Numbers,The serial is SR-123-XYZ.,The serial is S R one two three X Y Z.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\451.wav,generated
+452,License Plate or Serial Numbers,The plate reads NY-1234.,The plate reads N Y one two three four.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\452.wav,generated
+453,License Plate or Serial Numbers,The registration code is RC-456-2023.,The registration code is R C four five six twenty twenty three.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\453.wav,generated
+454,License Plate or Serial Numbers,The VIN is 5XYZH4AG4JH123456.,The V I N is five X Y Z H four A G four J H one two three four five six.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\454.wav,generated
+455,License Plate or Serial Numbers,The ID number is ID-7890-ABC.,The I D number is I D seven eight nine zero A B C.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\455.wav,generated
+456,License Plate or Serial Numbers,The permit is PER-12345.,The permit is P E R one two three four five.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\456.wav,generated
+457,License Plate or Serial Numbers,The serial code is SC-2023-789.,The serial code is S C twenty twenty three seven eight nine.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\457.wav,generated
+458,License Plate or Serial Numbers,The license is DL-456-XYZ.,The license is D L four five six X Y Z.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\458.wav,generated
+459,License Plate or Serial Numbers,The tag number is TAG-789012.,The tag number is T A G seven eight nine zero one two.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\459.wav,generated
+460,License Plate or Serial Numbers,The plate is WA-123-ABC.,The plate is W A one two three A B C.,Kokoro-82M,af_heart,af_heart\License_Plate_or_Serial_Numbers\460.wav,generated
+461,Musical Notation,The note is C♯.,The note is C sharp.,Kokoro-82M,af_heart,af_heart\Musical_Notation\461.wav,generated
+462,Musical Notation,Play the chord G7.,Play the chord G seven.,Kokoro-82M,af_heart,af_heart\Musical_Notation\462.wav,generated
+463,Musical Notation,The key is Dmaj.,The key is D major.,Kokoro-82M,af_heart,af_heart\Musical_Notation\463.wav,generated
+464,Musical Notation,The tempo is 120 BPM.,The tempo is one hundred twenty B P M.,Kokoro-82M,af_heart,af_heart\Musical_Notation\464.wav,generated
+465,Musical Notation,The scale is Am.,The scale is A minor.,Kokoro-82M,af_heart,af_heart\Musical_Notation\465.wav,generated
+466,Musical Notation,The note is F♯.,The note is F sharp.,Kokoro-82M,af_heart,af_heart\Musical_Notation\466.wav,generated
+467,Musical Notation,The time signature is 4/4.,The time signature is four four.,Kokoro-82M,af_heart,af_heart\Musical_Notation\467.wav,generated
+468,Musical Notation,The chord is B♭m.,The chord is B flat minor.,Kokoro-82M,af_heart,af_heart\Musical_Notation\468.wav,generated
+469,Musical Notation,The note is E♭.,The note is E flat.,Kokoro-82M,af_heart,af_heart\Musical_Notation\469.wav,generated
+470,Musical Notation,The dynamic is ff (fortissimo).,The dynamic is fortissimo.,Kokoro-82M,af_heart,af_heart\Musical_Notation\470.wav,generated
+471,Musical Notation,The interval is a perfect 5th.,The interval is a perfect fifth.,Kokoro-82M,af_heart,af_heart\Musical_Notation\471.wav,generated
+472,Musical Notation,The note is A♯.,The note is A sharp.,Kokoro-82M,af_heart,af_heart\Musical_Notation\472.wav,generated
+473,Musical Notation,This is likely an Amaj7.,This is likely an A major seventh.,Kokoro-82M,af_heart,af_heart\Musical_Notation\473.wav,generated
+474,Musical Notation,The chord progression is I-IV-V.,The chord progression is one four five.,Kokoro-82M,af_heart,af_heart\Musical_Notation\474.wav,generated
+475,Musical Notation,The note is B♭.,The note is B flat.,Kokoro-82M,af_heart,af_heart\Musical_Notation\475.wav,generated
+476,Musical Notation,The tempo is ♩=80.,The tempo is quarter note equals eighty.,Kokoro-82M,af_heart,af_heart\Musical_Notation\476.wav,generated
+477,Musical Notation,The key signature has 3 sharps.,The key signature has three sharps.,Kokoro-82M,af_heart,af_heart\Musical_Notation\477.wav,generated
+478,Musical Notation,The note is G♯.,The note is G sharp.,Kokoro-82M,af_heart,af_heart\Musical_Notation\478.wav,generated
+479,Musical Notation,The dynamic is p (piano).,The dynamic is piano.,Kokoro-82M,af_heart,af_heart\Musical_Notation\479.wav,generated
+480,Musical Notation,The time signature is 3/4.,The time signature is three four.,Kokoro-82M,af_heart,af_heart\Musical_Notation\480.wav,generated
+481,Stock Ticker,The stock symbol is AAPL.,The stock symbol is A A P L.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\481.wav,generated
+482,Stock Ticker,The ticker is MSFT.,The ticker is M S F T.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\482.wav,generated
+483,Stock Ticker,The stock is GOOG.,The stock is G O O G.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\483.wav,generated
+484,Stock Ticker,The symbol is AMZN.,The symbol is A M Z N.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\484.wav,generated
+485,Stock Ticker,The ticker is TSLA.,The ticker is T S L A.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\485.wav,generated
+486,Stock Ticker,The stock is FB.,The stock is F B.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\486.wav,generated
+487,Stock Ticker,The symbol is NFLX.,The symbol is N F L X.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\487.wav,generated
+488,Stock Ticker,The ticker is NVDA.,The ticker is N V D A.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\488.wav,generated
+489,Stock Ticker,The stock is BRK.B.,The stock is B R K dot B.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\489.wav,generated
+490,Stock Ticker,The symbol is JPM.,The symbol is J P M.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\490.wav,generated
+491,Stock Ticker,The stock is UHS.,The stock is U H S.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\491.wav,generated
+492,Stock Ticker,The stock is DIS.,The stock is D I S.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\492.wav,generated
+493,Stock Ticker,The symbol is BAC.,The symbol is B A C.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\493.wav,generated
+494,Stock Ticker,The ticker is WMT.,The ticker is W M T.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\494.wav,generated
+495,Stock Ticker,The stock is PG.,The stock is P G.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\495.wav,generated
+496,Stock Ticker,The symbol is HD.,The symbol is H D.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\496.wav,generated
+497,Stock Ticker,The ticker is INTC.,The ticker is I N T C.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\497.wav,generated
+498,Stock Ticker,The stock is CSCO.,The stock is C S C O.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\498.wav,generated
+499,Stock Ticker,The symbol is CMCSA.,The symbol is C M C S A.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\499.wav,generated
+500,Stock Ticker,The ticker is PEP.,The ticker is P E P.,Kokoro-82M,af_heart,af_heart\Stock_Ticker\500.wav,generated
+501,Biological Classification,The virus strain is H5N1.,The virus strain is H five N one.,Kokoro-82M,af_heart,af_heart\Biological_Classification\501.wav,generated
+502,Biological Classification,The bacteria is E. coli.,The bacteria is E coli.,Kokoro-82M,af_heart,af_heart\Biological_Classification\502.wav,generated
+503,Biological Classification,MERS was first identified in Saudi Arabia.,Mers was first identified in Saudi Arabia.,Kokoro-82M,af_heart,af_heart\Biological_Classification\503.wav,generated
+504,Biological Classification,He tested positive for COVID-19.,He tested positive for covid nineteen.,Kokoro-82M,af_heart,af_heart\Biological_Classification\504.wav,generated
+505,Biological Classification,The strain is SARS-CoV-2.,The strain is Sars Cov two.,Kokoro-82M,af_heart,af_heart\Biological_Classification\505.wav,generated
+506,Biological Classification,The patient has HPV-16.,The patient has H P V sixteen.,Kokoro-82M,af_heart,af_heart\Biological_Classification\506.wav,generated
+507,Biological Classification,The virus is classified as DENV-2.,The virus is classified as dengue virus two.,Kokoro-82M,af_heart,af_heart\Biological_Classification\507.wav,generated
+508,Biological Classification,The virus is HIV-1.,The virus is H I V one.,Kokoro-82M,af_heart,af_heart\Biological_Classification\508.wav,generated
+509,Biological Classification,TB is still a major cause of death worldwide.,T B is still a major cause of death worldwide.,Kokoro-82M,af_heart,af_heart\Biological_Classification\509.wav,generated
+510,Biological Classification,We observed increased resistance in B. subtilis.,We observed increased resistance in B subtilis.,Kokoro-82M,af_heart,af_heart\Biological_Classification\510.wav,generated
+511,Biological Classification,They were treated for HPV.,They were treated for H P V.,Kokoro-82M,af_heart,af_heart\Biological_Classification\511.wav,generated
+512,Biological Classification,The strain is H1N1.,The strain is H one N one.,Kokoro-82M,af_heart,af_heart\Biological_Classification\512.wav,generated
+513,Biological Classification,The main cause of the outbreak was Salmonella spp.,The main cause of the outbreak was Salmonella species.,Kokoro-82M,af_heart,af_heart\Biological_Classification\513.wav,generated
+514,Biological Classification,The lab confirmed the presence of C. difficile in the sample.,The lab confirmed the presence of C difficile in the sample.,Kokoro-82M,af_heart,af_heart\Biological_Classification\514.wav,generated
+515,Biological Classification,The virus is HBV.,The virus is H B V.,Kokoro-82M,af_heart,af_heart\Biological_Classification\515.wav,generated
+516,Biological Classification,HIV can remain asymptomatic for years.,H I V can remain asymptomatic for years.,Kokoro-82M,af_heart,af_heart\Biological_Classification\516.wav,generated
+517,Biological Classification,Antibodies for EBV were present in the sample.,Antibodies for E B V were present in the sample.,Kokoro-82M,af_heart,af_heart\Biological_Classification\517.wav,generated
+518,Biological Classification,He tested positive for COVID.,He tested positive for covid.,Kokoro-82M,af_heart,af_heart\Biological_Classification\518.wav,generated
+519,Biological Classification,The strain is B.1.1.7.,The strain is B one point one point seven.,Kokoro-82M,af_heart,af_heart\Biological_Classification\519.wav,generated
+520,Biological Classification,He received an MMR booster shot.,He received an M M R booster shot.,Kokoro-82M,af_heart,af_heart\Biological_Classification\520.wav,generated
+521,Address,"The address is 123 Main St, Anytown, USA.","The address is one two three Main Street, Anytown, U S A.",Kokoro-82M,af_heart,af_heart\Address\521.wav,generated
+522,Address,"The office is at 456 Elm Avenue, Suite 200.","The office is at four five six Elm Avenue, Suite two hundred.",Kokoro-82M,af_heart,af_heart\Address\522.wav,generated
+523,Address,"The building is on 789 Oak Blvd, Apt 3B.","The building is on seven eight nine Oak Boulevard, Apartment three B.",Kokoro-82M,af_heart,af_heart\Address\523.wav,generated
+524,Address,"The location is 10 Downing Street, London.","The location is ten Downing Street, London.",Kokoro-82M,af_heart,af_heart\Address\524.wav,generated
+525,Address,"The store is at 321 Pine Rd, Unit 5.","The store is at three two one Pine Road, Unit five.",Kokoro-82M,af_heart,af_heart\Address\525.wav,generated
+526,Address,"The apartment is 202 Maple Lane, #4.","The apartment is two zero two Maple Lane, number four.",Kokoro-82M,af_heart,af_heart\Address\526.wav,generated
+527,Address,"The house is at 55 Cedar Drive, Boston, MA.","The house is at fifty five Cedar Drive, Boston, Massachusetts.",Kokoro-82M,af_heart,af_heart\Address\527.wav,generated
+528,Address,"The business is on 1000 Broadway, Floor 12.","The business is on one thousand Broadway, Floor twelve.",Kokoro-82M,af_heart,af_heart\Address\528.wav,generated
+529,Address,"The warehouse is at 250 Industrial Park, Bldg 7.","The warehouse is at two hundred fifty Industrial Park, Building seven.",Kokoro-82M,af_heart,af_heart\Address\529.wav,generated
+530,Address,"The clinic is at 33 Park Place, Room 101.","The clinic is at thirty three Park Place, Room one zero one.",Kokoro-82M,af_heart,af_heart\Address\530.wav,generated
+531,Address,"The school is on 500 School St, District 2.","The school is on five hundred School Street, District two.",Kokoro-82M,af_heart,af_heart\Address\531.wav,generated
+532,Address,"The hotel is at 777 Sunset Blvd, Los Angeles.","The hotel is at seven seven seven Sunset Boulevard, Los Angeles.",Kokoro-82M,af_heart,af_heart\Address\532.wav,generated
+533,Address,"The restaurant is 89 River Road, Level 2.","The restaurant is eighty nine River Road, Level two.",Kokoro-82M,af_heart,af_heart\Address\533.wav,generated
+534,Address,"The facility is at 404 Northwest Ave, Unit 9.","The facility is at four zero four Northwest Avenue, Unit nine.",Kokoro-82M,af_heart,af_heart\Address\534.wav,generated
+535,Address,"The residence is 1234 Fifth Ave, Apt 10C.","The residence is one two three four Fifth Avenue, Apartment ten C.",Kokoro-82M,af_heart,af_heart\Address\535.wav,generated
+536,Address,"The shop is at 22 Market Square, Stall 3.","The shop is at twenty two Market Square, Stall three.",Kokoro-82M,af_heart,af_heart\Address\536.wav,generated
+537,Address,"The lab is on 15 Science Park, Wing B.","The lab is on fifteen Science Park, Wing B.",Kokoro-82M,af_heart,af_heart\Address\537.wav,generated
+538,Address,"The studio is at 88 Art Street, Loft 12.","The studio is at eighty eight Art Street, Loft twelve.",Kokoro-82M,af_heart,af_heart\Address\538.wav,generated
+539,Address,"The center is 600 Main Street, Block 4.","The center is six hundred Main Street, Block four.",Kokoro-82M,af_heart,af_heart\Address\539.wav,generated
+540,Address,"The office is at 999 Tech Drive, Suite 300.","The office is at nine nine nine Tech Drive, Suite three hundred.",Kokoro-82M,af_heart,af_heart\Address\540.wav,generated

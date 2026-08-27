@@ -1,0 +1,1973 @@
+[
+  {
+    "index": "1",
+    "category": "Date",
+    "original_text": "The event is on 05/20/2023.",
+    "normalized_text": "The event is on May twentieth twenty twenty three.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/1.wav"
+  },
+  {
+    "index": "2",
+    "category": "Date",
+    "original_text": "Her birthday is Oct 12.",
+    "normalized_text": "Her birthday is October twelfth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/2.wav"
+  },
+  {
+    "index": "3",
+    "category": "Date",
+    "original_text": "They married on 3rd July 1995.",
+    "normalized_text": "They married on July third nineteen ninety five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/3.wav"
+  },
+  {
+    "index": "4",
+    "category": "Date",
+    "original_text": "The deadline is 2024-12-31.",
+    "normalized_text": "The deadline is December thirty first twenty twenty four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/4.wav"
+  },
+  {
+    "index": "5",
+    "category": "Date",
+    "original_text": "We moved in on 1/1/22.",
+    "normalized_text": "We moved in on January first twenty two.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/5.wav"
+  },
+  {
+    "index": "6",
+    "category": "Date",
+    "original_text": "The meeting is scheduled for 15th August.",
+    "normalized_text": "The meeting is scheduled for the fifteenth of August.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/6.wav"
+  },
+  {
+    "index": "7",
+    "category": "Date",
+    "original_text": "He was born on 04-09-1980.",
+    "normalized_text": "He was born on April ninth nineteen eighty.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/7.wav"
+  },
+  {
+    "index": "8",
+    "category": "Date",
+    "original_text": "The festival runs from June 5 to June 10.",
+    "normalized_text": "The festival runs from June fifth to June tenth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/8.wav"
+  },
+  {
+    "index": "9",
+    "category": "Date",
+    "original_text": "The contract expires on 11/30.",
+    "normalized_text": "The contract expires on November thirtieth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/9.wav"
+  },
+  {
+    "index": "10",
+    "category": "Date",
+    "original_text": "The document is dated 7-4-1776.",
+    "normalized_text": "The document is dated July fourth seventeen seventy six.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/10.wav"
+  },
+  {
+    "index": "11",
+    "category": "Date",
+    "original_text": "The conference is on 2025/03/15.",
+    "normalized_text": "The conference is on March fifteenth twenty twenty five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/11.wav"
+  },
+  {
+    "index": "12",
+    "category": "Date",
+    "original_text": "The flight is booked for 2nd September.",
+    "normalized_text": "The flight is booked for September second.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/12.wav"
+  },
+  {
+    "index": "13",
+    "category": "Date",
+    "original_text": "The warranty ends on 12/25/2024.",
+    "normalized_text": "The warranty ends on December twenty fifth twenty twenty four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/13.wav"
+  },
+  {
+    "index": "14",
+    "category": "Date",
+    "original_text": "The deadline is 31 Jan 2025.",
+    "normalized_text": "The deadline is January thirty first twenty twenty five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/14.wav"
+  },
+  {
+    "index": "15",
+    "category": "Date",
+    "original_text": "The event starts on 06/10.",
+    "normalized_text": "The event starts on June tenth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/15.wav"
+  },
+  {
+    "index": "16",
+    "category": "Date",
+    "original_text": "The report was filed on 8-15-2023.",
+    "normalized_text": "The report was filed on August fifteenth twenty twenty three.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/16.wav"
+  },
+  {
+    "index": "17",
+    "category": "Date",
+    "original_text": "The exhibit opens on 09/01/24.",
+    "normalized_text": "The exhibit opens on September first twenty four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/17.wav"
+  },
+  {
+    "index": "18",
+    "category": "Date",
+    "original_text": "The sale ends on 5th Nov.",
+    "normalized_text": "The sale ends on November fifth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/18.wav"
+  },
+  {
+    "index": "19",
+    "category": "Date",
+    "original_text": "The application is due 2026-07-04.",
+    "normalized_text": "The application is due July fourth twenty twenty six.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/19.wav"
+  },
+  {
+    "index": "20",
+    "category": "Date",
+    "original_text": "The reunion is on 10/10/25.",
+    "normalized_text": "The reunion is on October tenth twenty five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Date/20.wav"
+  },
+  {
+    "index": "21",
+    "category": "Time",
+    "original_text": "Let's meet at 10:30 tomorrow.",
+    "normalized_text": "Let's meet at ten thirty tomorrow.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/21.wav"
+  },
+  {
+    "index": "22",
+    "category": "Time",
+    "original_text": "The train departs at 15:45.",
+    "normalized_text": "The train departs at fifteen forty five",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/22.wav"
+  },
+  {
+    "index": "23",
+    "category": "Time",
+    "original_text": "Breakfast is served at 7 AM.",
+    "normalized_text": "Breakfast is served at seven A M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/23.wav"
+  },
+  {
+    "index": "24",
+    "category": "Time",
+    "original_text": "The show starts at 8:15 PM.",
+    "normalized_text": "The show starts at eight fifteen P M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/24.wav"
+  },
+  {
+    "index": "25",
+    "category": "Time",
+    "original_text": "The deadline is 23:59.",
+    "normalized_text": "The deadline is twenty three fifty nine.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/25.wav"
+  },
+  {
+    "index": "26",
+    "category": "Time",
+    "original_text": "The store opens at 9:00.",
+    "normalized_text": "The store opens at nine o'clock.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/26.wav"
+  },
+  {
+    "index": "27",
+    "category": "Time",
+    "original_text": "The meeting is at 12:00 noon.",
+    "normalized_text": "The meeting is at twelve noon.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/27.wav"
+  },
+  {
+    "index": "28",
+    "category": "Time",
+    "original_text": "The flight leaves at 06:20.",
+    "normalized_text": "The flight leaves at six twenty.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/28.wav"
+  },
+  {
+    "index": "29",
+    "category": "Time",
+    "original_text": "The class ends at 4:45 PM.",
+    "normalized_text": "The class ends at four forty five P M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/29.wav"
+  },
+  {
+    "index": "30",
+    "category": "Time",
+    "original_text": "The alarm goes off at 5:30 AM.",
+    "normalized_text": "The alarm goes off at five thirty A M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/30.wav"
+  },
+  {
+    "index": "31",
+    "category": "Time",
+    "original_text": "The concert begins at 19:00.",
+    "normalized_text": "The concert begins at nineteen hundred hours.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/31.wav"
+  },
+  {
+    "index": "32",
+    "category": "Time",
+    "original_text": "The webinar is at 13:15.",
+    "normalized_text": "The webinar is at thirteen fifteen.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/32.wav"
+  },
+  {
+    "index": "33",
+    "category": "Time",
+    "original_text": "The bakery closes at 3 PM.",
+    "normalized_text": "The bakery closes at three P M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/33.wav"
+  },
+  {
+    "index": "34",
+    "category": "Time",
+    "original_text": "The deadline is midnight.",
+    "normalized_text": "The deadline is midnight.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/34.wav"
+  },
+  {
+    "index": "35",
+    "category": "Time",
+    "original_text": "The movie starts at 6:00 PM.",
+    "normalized_text": "The movie starts at six P M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/35.wav"
+  },
+  {
+    "index": "36",
+    "category": "Time",
+    "original_text": "The bus arrives at 14:50.",
+    "normalized_text": "The bus arrives at fourteen fifty.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/36.wav"
+  },
+  {
+    "index": "37",
+    "category": "Time",
+    "original_text": "The office opens at 8:30 AM.",
+    "normalized_text": "The office opens at eight thirty A M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/37.wav"
+  },
+  {
+    "index": "38",
+    "category": "Time",
+    "original_text": "The appointment is at 11:45.",
+    "normalized_text": "The appointment is at eleven forty five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/38.wav"
+  },
+  {
+    "index": "39",
+    "category": "Time",
+    "original_text": "The game kicks off at 20:00.",
+    "normalized_text": "The game kicks off at twenty hundred hours.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/39.wav"
+  },
+  {
+    "index": "40",
+    "category": "Time",
+    "original_text": "The workshop ends at 5:15 PM.",
+    "normalized_text": "The workshop ends at five fifteen P M.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Time/40.wav"
+  },
+  {
+    "index": "41",
+    "category": "Cardinal",
+    "original_text": "There are 25 students in the class.",
+    "normalized_text": "There are twenty five students in the class.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/41.wav"
+  },
+  {
+    "index": "42",
+    "category": "Cardinal",
+    "original_text": "She bought 3 apples.",
+    "normalized_text": "She bought three apples.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/42.wav"
+  },
+  {
+    "index": "43",
+    "category": "Cardinal",
+    "original_text": "The building has 100 floors.",
+    "normalized_text": "The building has one hundred floors.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/43.wav"
+  },
+  {
+    "index": "44",
+    "category": "Cardinal",
+    "original_text": "He scored 99 on the test.",
+    "normalized_text": "He scored ninety nine on the test.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/44.wav"
+  },
+  {
+    "index": "45",
+    "category": "Cardinal",
+    "original_text": "The team won 5 championships.",
+    "normalized_text": "The team won five championships.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/45.wav"
+  },
+  {
+    "index": "46",
+    "category": "Cardinal",
+    "original_text": "There were 12 guests at the party.",
+    "normalized_text": "There were twelve guests at the party.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/46.wav"
+  },
+  {
+    "index": "47",
+    "category": "Cardinal",
+    "original_text": "The recipe calls for 2 eggs.",
+    "normalized_text": "The recipe calls for two eggs.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/47.wav"
+  },
+  {
+    "index": "48",
+    "category": "Cardinal",
+    "original_text": "The car can seat 7 people.",
+    "normalized_text": "The car can seat seven people.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/48.wav"
+  },
+  {
+    "index": "49",
+    "category": "Cardinal",
+    "original_text": "The book has 450 pages.",
+    "normalized_text": "The book has four hundred fifty pages.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/49.wav"
+  },
+  {
+    "index": "50",
+    "category": "Cardinal",
+    "original_text": "The company employs 1,200 workers.",
+    "normalized_text": "The company employs one thousand two hundred workers.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/50.wav"
+  },
+  {
+    "index": "51",
+    "category": "Cardinal",
+    "original_text": "The marathon had 10,000 runners.",
+    "normalized_text": "The marathon had ten thousand runners.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/51.wav"
+  },
+  {
+    "index": "52",
+    "category": "Cardinal",
+    "original_text": "She waited for 15 minutes.",
+    "normalized_text": "She waited for fifteen minutes.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/52.wav"
+  },
+  {
+    "index": "53",
+    "category": "Cardinal",
+    "original_text": "The laptop weighs 4 pounds.",
+    "normalized_text": "The laptop weighs four pounds.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/53.wav"
+  },
+  {
+    "index": "54",
+    "category": "Cardinal",
+    "original_text": "The city has 8 million residents.",
+    "normalized_text": "The city has eight million residents.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/54.wav"
+  },
+  {
+    "index": "55",
+    "category": "Cardinal",
+    "original_text": "The team scored 21 points.",
+    "normalized_text": "The team scored twenty one points.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/55.wav"
+  },
+  {
+    "index": "56",
+    "category": "Cardinal",
+    "original_text": "The store sells 50 kinds of cheese.",
+    "normalized_text": "The store sells fifty kinds of cheese.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/56.wav"
+  },
+  {
+    "index": "57",
+    "category": "Cardinal",
+    "original_text": "The bus arrives in 30 minutes.",
+    "normalized_text": "The bus arrives in thirty minutes.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/57.wav"
+  },
+  {
+    "index": "58",
+    "category": "Cardinal",
+    "original_text": "The hotel has 150 rooms.",
+    "normalized_text": "The hotel has one hundred fifty rooms.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/58.wav"
+  },
+  {
+    "index": "59",
+    "category": "Cardinal",
+    "original_text": "The painting sold for $1.5 million.",
+    "normalized_text": "The painting sold for one point five million dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/59.wav"
+  },
+  {
+    "index": "60",
+    "category": "Cardinal",
+    "original_text": "The hike is 7 miles long.",
+    "normalized_text": "The hike is seven miles long.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Cardinal/60.wav"
+  },
+  {
+    "index": "61",
+    "category": "Ordinal",
+    "original_text": "She finished in 1st place.",
+    "normalized_text": "She finished in first place.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/61.wav"
+  },
+  {
+    "index": "62",
+    "category": "Ordinal",
+    "original_text": "This is the 3rd time I've called.",
+    "normalized_text": "This is the third time I've called.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/62.wav"
+  },
+  {
+    "index": "63",
+    "category": "Ordinal",
+    "original_text": "He lives on the 22nd floor.",
+    "normalized_text": "He lives on the twenty second floor.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/63.wav"
+  },
+  {
+    "index": "64",
+    "category": "Ordinal",
+    "original_text": "The 5th chapter is the most interesting.",
+    "normalized_text": "The fifth chapter is the most interesting.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/64.wav"
+  },
+  {
+    "index": "65",
+    "category": "Ordinal",
+    "original_text": "Her birthday is on the 10th.",
+    "normalized_text": "Her birthday is on the tenth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/65.wav"
+  },
+  {
+    "index": "66",
+    "category": "Ordinal",
+    "original_text": "The 100th anniversary is next year.",
+    "normalized_text": "The one hundredth anniversary is next year.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/66.wav"
+  },
+  {
+    "index": "67",
+    "category": "Ordinal",
+    "original_text": "They celebrated their 25th wedding anniversary.",
+    "normalized_text": "They celebrated their twenty fifth wedding anniversary.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/67.wav"
+  },
+  {
+    "index": "68",
+    "category": "Ordinal",
+    "original_text": "The store is on 42nd Street.",
+    "normalized_text": "The store is on forty second Street.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/68.wav"
+  },
+  {
+    "index": "69",
+    "category": "Ordinal",
+    "original_text": "This is my 2nd attempt.",
+    "normalized_text": "This is my second attempt.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/69.wav"
+  },
+  {
+    "index": "70",
+    "category": "Ordinal",
+    "original_text": "The 15th of March is a holiday.",
+    "normalized_text": "The fifteenth of March is a holiday.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/70.wav"
+  },
+  {
+    "index": "71",
+    "category": "Ordinal",
+    "original_text": "He ranked 50th in the competition.",
+    "normalized_text": "He ranked fiftieth in the competition.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/71.wav"
+  },
+  {
+    "index": "72",
+    "category": "Ordinal",
+    "original_text": "The 1st prize is $10,000.",
+    "normalized_text": "The first prize is ten thousand dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/72.wav"
+  },
+  {
+    "index": "73",
+    "category": "Ordinal",
+    "original_text": "The 9th inning was intense.",
+    "normalized_text": "The ninth inning was intense.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/73.wav"
+  },
+  {
+    "index": "74",
+    "category": "Ordinal",
+    "original_text": "She is the 4th person to ask.",
+    "normalized_text": "She is the fourth person to ask.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/74.wav"
+  },
+  {
+    "index": "75",
+    "category": "Ordinal",
+    "original_text": "The 30th birthday is a milestone.",
+    "normalized_text": "The thirtieth birthday is a milestone.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/75.wav"
+  },
+  {
+    "index": "76",
+    "category": "Ordinal",
+    "original_text": "The 7th guest arrived late.",
+    "normalized_text": "The seventh guest arrived late.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/76.wav"
+  },
+  {
+    "index": "77",
+    "category": "Ordinal",
+    "original_text": "The 12th month is December.",
+    "normalized_text": "The twelfth month is December.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/77.wav"
+  },
+  {
+    "index": "78",
+    "category": "Ordinal",
+    "original_text": "The 21st century began in 2001.",
+    "normalized_text": "The twenty first century began in two thousand one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/78.wav"
+  },
+  {
+    "index": "79",
+    "category": "Ordinal",
+    "original_text": "The 6th sense is intuition.",
+    "normalized_text": "The sixth sense is intuition.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/79.wav"
+  },
+  {
+    "index": "80",
+    "category": "Ordinal",
+    "original_text": "The 18th hole is the hardest.",
+    "normalized_text": "The eighteenth hole is the hardest.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Ordinal/80.wav"
+  },
+  {
+    "index": "81",
+    "category": "Decimal",
+    "original_text": "The temperature is 98.6°F.",
+    "normalized_text": "The temperature is ninety eight point six degrees Fahrenheit.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/81.wav"
+  },
+  {
+    "index": "82",
+    "category": "Decimal",
+    "original_text": "The measurement is 3.14 cm.",
+    "normalized_text": "The measurement is three point one four centimeters.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/82.wav"
+  },
+  {
+    "index": "83",
+    "category": "Decimal",
+    "original_text": "The price increased by 2.5%.",
+    "normalized_text": "The price increased by two point five percent.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/83.wav"
+  },
+  {
+    "index": "84",
+    "category": "Decimal",
+    "original_text": "The weight is 0.75 kg.",
+    "normalized_text": "The weight is zero point seven five kilograms.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/84.wav"
+  },
+  {
+    "index": "85",
+    "category": "Decimal",
+    "original_text": "The distance is 5.2 miles.",
+    "normalized_text": "The distance is five point two miles.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/85.wav"
+  },
+  {
+    "index": "86",
+    "category": "Decimal",
+    "original_text": "The score was 7.8 out of 10.",
+    "normalized_text": "The score was seven point eight out of ten.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/86.wav"
+  },
+  {
+    "index": "87",
+    "category": "Decimal",
+    "original_text": "The ratio is 1.5:1.",
+    "normalized_text": "The ratio is one point five to one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/87.wav"
+  },
+  {
+    "index": "88",
+    "category": "Decimal",
+    "original_text": "The bottle holds 1.75 liters.",
+    "normalized_text": "The bottle holds one point seven five liters.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/88.wav"
+  },
+  {
+    "index": "89",
+    "category": "Decimal",
+    "original_text": "The interest rate is 3.25%.",
+    "normalized_text": "The interest rate is three point two five percent.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/89.wav"
+  },
+  {
+    "index": "90",
+    "category": "Decimal",
+    "original_text": "The growth rate is 0.8%.",
+    "normalized_text": "The growth rate is zero point eight percent.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/90.wav"
+  },
+  {
+    "index": "91",
+    "category": "Decimal",
+    "original_text": "The average is 4.6.",
+    "normalized_text": "The average is four point six.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/91.wav"
+  },
+  {
+    "index": "92",
+    "category": "Decimal",
+    "original_text": "The speed was 55.5 mph.",
+    "normalized_text": "The speed was fifty five point five miles per hour.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/92.wav"
+  },
+  {
+    "index": "93",
+    "category": "Decimal",
+    "original_text": "The dosage is 0.5 mg.",
+    "normalized_text": "The dosage is zero point five milligrams.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/93.wav"
+  },
+  {
+    "index": "94",
+    "category": "Decimal",
+    "original_text": "The voltage is 12.3 V.",
+    "normalized_text": "The voltage is twelve point three volts.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/94.wav"
+  },
+  {
+    "index": "95",
+    "category": "Decimal",
+    "original_text": "The length is 6.25 inches.",
+    "normalized_text": "The length is six point two five inches.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/95.wav"
+  },
+  {
+    "index": "96",
+    "category": "Decimal",
+    "original_text": "The density is 1.05 g/cm³.",
+    "normalized_text": "The density is one point zero five grams per cubic centimeter.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/96.wav"
+  },
+  {
+    "index": "97",
+    "category": "Decimal",
+    "original_text": "The angle is 22.5 degrees.",
+    "normalized_text": "The angle is twenty two point five degrees.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/97.wav"
+  },
+  {
+    "index": "98",
+    "category": "Decimal",
+    "original_text": "The discount is 15.99%.",
+    "normalized_text": "The discount is fifteen point nine nine percent.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/98.wav"
+  },
+  {
+    "index": "99",
+    "category": "Decimal",
+    "original_text": "The battery is at 87.5%.",
+    "normalized_text": "The battery is at eighty seven point five percent.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/99.wav"
+  },
+  {
+    "index": "100",
+    "category": "Decimal",
+    "original_text": "The concentration is 0.01 M.",
+    "normalized_text": "The concentration is zero point zero one molar.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Decimal/100.wav"
+  },
+  {
+    "index": "101",
+    "category": "Fractions",
+    "original_text": "Add 1/2 cup of sugar.",
+    "normalized_text": "Add one half cup of sugar.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/101.wav"
+  },
+  {
+    "index": "102",
+    "category": "Fractions",
+    "original_text": "She ate 3/4 of the pizza.",
+    "normalized_text": "She ate three fourths of the pizza.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/102.wav"
+  },
+  {
+    "index": "103",
+    "category": "Fractions",
+    "original_text": "The glass is 2/3 full.",
+    "normalized_text": "The glass is two thirds full.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/103.wav"
+  },
+  {
+    "index": "104",
+    "category": "Fractions",
+    "original_text": "He owns 1/8 of the company.",
+    "normalized_text": "He owns one eighth of the company.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/104.wav"
+  },
+  {
+    "index": "105",
+    "category": "Fractions",
+    "original_text": "Cut the paper into 1/16 pieces.",
+    "normalized_text": "Cut the paper into one sixteenth pieces.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/105.wav"
+  },
+  {
+    "index": "106",
+    "category": "Fractions",
+    "original_text": "The recipe requires 1 1/2 teaspoons.",
+    "normalized_text": "The recipe requires one and a half teaspoons.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/106.wav"
+  },
+  {
+    "index": "107",
+    "category": "Fractions",
+    "original_text": "She drank 5/6 of the juice.",
+    "normalized_text": "She drank five sixths of the juice.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/107.wav"
+  },
+  {
+    "index": "108",
+    "category": "Fractions",
+    "original_text": "The tank is 7/8 empty.",
+    "normalized_text": "The tank is seven eighths empty.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/108.wav"
+  },
+  {
+    "index": "109",
+    "category": "Fractions",
+    "original_text": "The discount is 1/4 off.",
+    "normalized_text": "The discount is one fourth off.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/109.wav"
+  },
+  {
+    "index": "110",
+    "category": "Fractions",
+    "original_text": "The room is 3 3/4 meters wide.",
+    "normalized_text": "The room is three and three fourths meters wide.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/110.wav"
+  },
+  {
+    "index": "111",
+    "category": "Fractions",
+    "original_text": "He finished 9/10 of the work.",
+    "normalized_text": "He finished nine tenths of the work.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/111.wav"
+  },
+  {
+    "index": "112",
+    "category": "Fractions",
+    "original_text": "The pie was divided into 1/12 slices.",
+    "normalized_text": "The pie was divided into one twelfth slices.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/112.wav"
+  },
+  {
+    "index": "113",
+    "category": "Fractions",
+    "original_text": "The margin is 5 1/2 inches.",
+    "normalized_text": "The margin is five and a half inches.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/113.wav"
+  },
+  {
+    "index": "114",
+    "category": "Fractions",
+    "original_text": "The mixture is 2/5 water.",
+    "normalized_text": "The mixture is two fifths water.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/114.wav"
+  },
+  {
+    "index": "115",
+    "category": "Fractions",
+    "original_text": "The probability is 3/7.",
+    "normalized_text": "The probability is three sevenths.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/115.wav"
+  },
+  {
+    "index": "116",
+    "category": "Fractions",
+    "original_text": "The length is 4 3/8 feet.",
+    "normalized_text": "The length is four and three eighths feet.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/116.wav"
+  },
+  {
+    "index": "117",
+    "category": "Fractions",
+    "original_text": "The team won 11/12 games.",
+    "normalized_text": "The team won eleven twelfths games.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/117.wav"
+  },
+  {
+    "index": "118",
+    "category": "Fractions",
+    "original_text": "The solution is 1/20 diluted.",
+    "normalized_text": "The solution is one twentieth diluted.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/118.wav"
+  },
+  {
+    "index": "119",
+    "category": "Fractions",
+    "original_text": "The ratio is 7/9.",
+    "normalized_text": "The ratio is seven ninths.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/119.wav"
+  },
+  {
+    "index": "120",
+    "category": "Fractions",
+    "original_text": "The distance is 1 1/4 miles.",
+    "normalized_text": "The distance is one and a quarter miles.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Fractions/120.wav"
+  },
+  {
+    "index": "161",
+    "category": "Currency",
+    "original_text": "The price is $10.99.",
+    "normalized_text": "The price is ten dollars and ninety nine cents.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/161.wav"
+  },
+  {
+    "index": "162",
+    "category": "Currency",
+    "original_text": "She paid €25 for the book.",
+    "normalized_text": "She paid twenty five euros for the book.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/162.wav"
+  },
+  {
+    "index": "163",
+    "category": "Currency",
+    "original_text": "The fee is ¥5000.",
+    "normalized_text": "The fee is five thousand yen.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/163.wav"
+  },
+  {
+    "index": "164",
+    "category": "Currency",
+    "original_text": "The cost is £15.50.",
+    "normalized_text": "The cost is fifteen pounds and fifty pence.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/164.wav"
+  },
+  {
+    "index": "165",
+    "category": "Currency",
+    "original_text": "The donation was $100.",
+    "normalized_text": "The donation was one hundred dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/165.wav"
+  },
+  {
+    "index": "166",
+    "category": "Currency",
+    "original_text": "The rent is €1200 per month.",
+    "normalized_text": "The rent is one thousand two hundred euros per month.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/166.wav"
+  },
+  {
+    "index": "167",
+    "category": "Currency",
+    "original_text": "The ticket costs ₹750.",
+    "normalized_text": "The ticket costs seven hundred fifty rupees.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/167.wav"
+  },
+  {
+    "index": "168",
+    "category": "Currency",
+    "original_text": "The bill came to $45.67.",
+    "normalized_text": "The bill came to forty five dollars and sixty seven cents.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/168.wav"
+  },
+  {
+    "index": "169",
+    "category": "Currency",
+    "original_text": "The exchange rate is 1.2 USD to EUR.",
+    "normalized_text": "The exchange rate is one point two U S dollars to euros.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/169.wav"
+  },
+  {
+    "index": "170",
+    "category": "Currency",
+    "original_text": "The salary is ¥300,000 per year.",
+    "normalized_text": "The salary is three hundred thousand yen per year.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/170.wav"
+  },
+  {
+    "index": "171",
+    "category": "Currency",
+    "original_text": "The budget is $1 million.",
+    "normalized_text": "The budget is one million dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/171.wav"
+  },
+  {
+    "index": "172",
+    "category": "Currency",
+    "original_text": "The fine is €50.",
+    "normalized_text": "The fine is fifty euros.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/172.wav"
+  },
+  {
+    "index": "173",
+    "category": "Currency",
+    "original_text": "The savings account has £10,000.",
+    "normalized_text": "The savings account has ten thousand pounds.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/173.wav"
+  },
+  {
+    "index": "174",
+    "category": "Currency",
+    "original_text": "The painting sold for $2.5 million.",
+    "normalized_text": "The painting sold for two point five million dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/174.wav"
+  },
+  {
+    "index": "175",
+    "category": "Currency",
+    "original_text": "The loan is for ¥1,000,000.",
+    "normalized_text": "The loan is for one million yen.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/175.wav"
+  },
+  {
+    "index": "176",
+    "category": "Currency",
+    "original_text": "The refund is $19.95.",
+    "normalized_text": "The refund is nineteen dollars and ninety five cents.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/176.wav"
+  },
+  {
+    "index": "177",
+    "category": "Currency",
+    "original_text": "The fare is ₩2500.",
+    "normalized_text": "The fare is two thousand five hundred won.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/177.wav"
+  },
+  {
+    "index": "178",
+    "category": "Currency",
+    "original_text": "The prize is €1,000.",
+    "normalized_text": "The prize is one thousand euros.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/178.wav"
+  },
+  {
+    "index": "179",
+    "category": "Currency",
+    "original_text": "The debt is £500.",
+    "normalized_text": "The debt is five hundred pounds.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/179.wav"
+  },
+  {
+    "index": "180",
+    "category": "Currency",
+    "original_text": "The investment is $50,000.",
+    "normalized_text": "The investment is fifty thousand dollars.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Currency/180.wav"
+  },
+  {
+    "index": "181",
+    "category": "Unit",
+    "original_text": "The box weighs 5 kg.",
+    "normalized_text": "The box weighs five kilograms.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/181.wav"
+  },
+  {
+    "index": "182",
+    "category": "Unit",
+    "original_text": "The distance is 10 miles.",
+    "normalized_text": "The distance is ten miles.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/182.wav"
+  },
+  {
+    "index": "183",
+    "category": "Unit",
+    "original_text": "The bottle holds 2 liters.",
+    "normalized_text": "The bottle holds two liters.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/183.wav"
+  },
+  {
+    "index": "184",
+    "category": "Unit",
+    "original_text": "The room is 15 feet wide.",
+    "normalized_text": "The room is fifteen feet wide.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/184.wav"
+  },
+  {
+    "index": "185",
+    "category": "Unit",
+    "original_text": "The speed limit is 60 mph.",
+    "normalized_text": "The speed limit is sixty miles per hour.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/185.wav"
+  },
+  {
+    "index": "186",
+    "category": "Unit",
+    "original_text": "The temperature is 20°C.",
+    "normalized_text": "The temperature is twenty degrees Celsius.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/186.wav"
+  },
+  {
+    "index": "187",
+    "category": "Unit",
+    "original_text": "The area is 500 square meters.",
+    "normalized_text": "The area is five hundred square meters.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/187.wav"
+  },
+  {
+    "index": "188",
+    "category": "Unit",
+    "original_text": "The package is 3 inches thick.",
+    "normalized_text": "The package is three inches thick.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/188.wav"
+  },
+  {
+    "index": "189",
+    "category": "Unit",
+    "original_text": "The pool is 25 meters long.",
+    "normalized_text": "The pool is twenty five meters long.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/189.wav"
+  },
+  {
+    "index": "190",
+    "category": "Unit",
+    "original_text": "The pressure is 100 kPa.",
+    "normalized_text": "The pressure is one hundred kilopascals.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/190.wav"
+  },
+  {
+    "index": "191",
+    "category": "Unit",
+    "original_text": "The height is 6 feet 2 inches.",
+    "normalized_text": "The height is six feet two inches.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/191.wav"
+  },
+  {
+    "index": "192",
+    "category": "Unit",
+    "original_text": "The dosage is 250 mg.",
+    "normalized_text": "The dosage is two hundred fifty milligrams.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/192.wav"
+  },
+  {
+    "index": "193",
+    "category": "Unit",
+    "original_text": "The volume is 1.5 gallons.",
+    "normalized_text": "The volume is one point five gallons.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/193.wav"
+  },
+  {
+    "index": "194",
+    "category": "Unit",
+    "original_text": "The cable is 10 cm long.",
+    "normalized_text": "The cable is ten centimeters long.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/194.wav"
+  },
+  {
+    "index": "195",
+    "category": "Unit",
+    "original_text": "The energy output is 50 kW.",
+    "normalized_text": "The energy output is fifty kilowatts.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/195.wav"
+  },
+  {
+    "index": "196",
+    "category": "Unit",
+    "original_text": "The rainfall was 2 inches.",
+    "normalized_text": "The rainfall was two inches.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/196.wav"
+  },
+  {
+    "index": "197",
+    "category": "Unit",
+    "original_text": "The weight limit is 50 lbs.",
+    "normalized_text": "The weight limit is fifty pounds.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/197.wav"
+  },
+  {
+    "index": "198",
+    "category": "Unit",
+    "original_text": "The screen is 24 inches diagonally.",
+    "normalized_text": "The screen is twenty four inches diagonally.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/198.wav"
+  },
+  {
+    "index": "199",
+    "category": "Unit",
+    "original_text": "The capacity is 5 tons.",
+    "normalized_text": "The capacity is five tons.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/199.wav"
+  },
+  {
+    "index": "200",
+    "category": "Unit",
+    "original_text": "The wavelength is 550 nm.",
+    "normalized_text": "The wavelength is five hundred fifty nanometers.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Unit/200.wav"
+  },
+  {
+    "index": "281",
+    "category": "Abbreviation",
+    "original_text": "Dr. Smith will see you now.",
+    "normalized_text": "Doctor Smith will see you now.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/281.wav"
+  },
+  {
+    "index": "283",
+    "category": "Abbreviation",
+    "original_text": "Prof. Johnson teaches biology.",
+    "normalized_text": "Professor Johnson teaches biology.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/283.wav"
+  },
+  {
+    "index": "284",
+    "category": "Abbreviation",
+    "original_text": "The store is on Main St.",
+    "normalized_text": "The store is on Main Street.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/284.wav"
+  },
+  {
+    "index": "285",
+    "category": "Abbreviation",
+    "original_text": "St. Patrick's Day is a public holiday in Ireland.",
+    "normalized_text": "Saint Patrick's Day is a public holiday in Ireland.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/285.wav"
+  },
+  {
+    "index": "286",
+    "category": "Abbreviation",
+    "original_text": "Mr. and Mrs. Jones are having a heated argument.",
+    "normalized_text": "Mister and Missus Jones are having a heated argument.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/286.wav"
+  },
+  {
+    "index": "287",
+    "category": "Abbreviation",
+    "original_text": "The document is from Jan. 2023.",
+    "normalized_text": "The document is from January twenty twenty three.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/287.wav"
+  },
+  {
+    "index": "288",
+    "category": "Abbreviation",
+    "original_text": "He bought a used car, incl. insurance.",
+    "normalized_text": "He bought a used car, including insurance.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/288.wav"
+  },
+  {
+    "index": "289",
+    "category": "Abbreviation",
+    "original_text": "The lab is run by Dr. Lee.",
+    "normalized_text": "The lab is run by Doctor Lee.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/289.wav"
+  },
+  {
+    "index": "290",
+    "category": "Abbreviation",
+    "original_text": "The office is on 5th Ave.",
+    "normalized_text": "The office is on Fifth Avenue.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/290.wav"
+  },
+  {
+    "index": "291",
+    "category": "Abbreviation",
+    "original_text": "The recipe requires 2 tsp salt.",
+    "normalized_text": "The recipe requires two teaspoons salt.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/291.wav"
+  },
+  {
+    "index": "292",
+    "category": "Abbreviation",
+    "original_text": "The conference is in Dec.",
+    "normalized_text": "The conference is in December.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/292.wav"
+  },
+  {
+    "index": "293",
+    "category": "Abbreviation",
+    "original_text": "Johnson & Co., Inc. is expanding overseas.",
+    "normalized_text": "Johnson and Company Inc is expanding overseas.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/293.wav"
+  },
+  {
+    "index": "294",
+    "category": "Abbreviation",
+    "original_text": "The book was written by J.K. Rowling.",
+    "normalized_text": "The book was written by J K Rowling.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/294.wav"
+  },
+  {
+    "index": "295",
+    "category": "Abbreviation",
+    "original_text": "The meeting will last approx. 45 min.",
+    "normalized_text": "The meeting will last approximately forty five minutes.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/295.wav"
+  },
+  {
+    "index": "296",
+    "category": "Abbreviation",
+    "original_text": "The game tonight is Lakers vs. Celtics.",
+    "normalized_text": "The game tonight is Lakers versus Celtics.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/296.wav"
+  },
+  {
+    "index": "297",
+    "category": "Abbreviation",
+    "original_text": "The bottle holds 12 oz.",
+    "normalized_text": "The bottle holds twelve ounces.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/297.wav"
+  },
+  {
+    "index": "298",
+    "category": "Abbreviation",
+    "original_text": "The event is on Fri., Nov. 10.",
+    "normalized_text": "The event is on Friday November tenth.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/298.wav"
+  },
+  {
+    "index": "299",
+    "category": "Abbreviation",
+    "original_text": "The doctor's name is Dr. Brown.",
+    "normalized_text": "The doctor's name is Doctor Brown.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/299.wav"
+  },
+  {
+    "index": "300",
+    "category": "Abbreviation",
+    "original_text": "The meeting is in Rm. 205.",
+    "normalized_text": "The meeting is in Room two zero five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Abbreviation/300.wav"
+  },
+  {
+    "index": "321",
+    "category": "ISBN",
+    "original_text": "The ISBN is 978-3-16-148410-0.",
+    "normalized_text": "The I S B N is nine seven eight three one six one four eight four one zero zero.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/321.wav"
+  },
+  {
+    "index": "322",
+    "category": "ISBN",
+    "original_text": "The book's ISBN-13 is 978-0-13-468599-1.",
+    "normalized_text": "The book's I S B N thirteen is nine seven eight zero one three four six eight five nine nine one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/322.wav"
+  },
+  {
+    "index": "323",
+    "category": "ISBN",
+    "original_text": "The ISBN-10 is 0-306-40615-2.",
+    "normalized_text": "The I S B N ten is zero three zero six four zero six one five two.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/323.wav"
+  },
+  {
+    "index": "324",
+    "category": "ISBN",
+    "original_text": "Check the ISBN 978-1-56619-909-4.",
+    "normalized_text": "Check the I S B N nine seven eight one five six six one nine nine zero nine four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/324.wav"
+  },
+  {
+    "index": "325",
+    "category": "ISBN",
+    "original_text": "The ISBN for the manual is 978-0-7356-4871-9.",
+    "normalized_text": "The I S B N for the manual is nine seven eight zero seven three five six four eight seven one nine.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/325.wav"
+  },
+  {
+    "index": "326",
+    "category": "ISBN",
+    "original_text": "The ISBN-13: 978-1-4028-9462-6.",
+    "normalized_text": "The I S B N thirteen: nine seven eight one four zero two eight nine four six two six.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/326.wav"
+  },
+  {
+    "index": "327",
+    "category": "ISBN",
+    "original_text": "The reference ISBN is 0-201-63361-2.",
+    "normalized_text": "The reference I S B N is zero two zero one six three three six one two.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/327.wav"
+  },
+  {
+    "index": "328",
+    "category": "ISBN",
+    "original_text": "The textbook's ISBN is 978-0-321-96551-4.",
+    "normalized_text": "The textbook's I S B N is nine seven eight zero three two one nine six five five one four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/328.wav"
+  },
+  {
+    "index": "329",
+    "category": "ISBN",
+    "original_text": "The ISBN-10: 1-56619-909-3.",
+    "normalized_text": "The I S B N ten: one five six six one nine nine zero nine three.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/329.wav"
+  },
+  {
+    "index": "330",
+    "category": "ISBN",
+    "original_text": "The novel's ISBN is 978-0-7432-7356-5.",
+    "normalized_text": "The novel's I S B N is nine seven eight zero seven four three two seven three five six five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/330.wav"
+  },
+  {
+    "index": "331",
+    "category": "ISBN",
+    "original_text": "The ISBN 978-0-262-03384-8 is valid.",
+    "normalized_text": "The I S B N nine seven eight zero two six two zero three three eight four eight is valid.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/331.wav"
+  },
+  {
+    "index": "332",
+    "category": "ISBN",
+    "original_text": "The ISBN-13: 978-1-59059-811-1.",
+    "normalized_text": "The I S B N thirteen: nine seven eight one five nine zero five nine eight one one one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/332.wav"
+  },
+  {
+    "index": "333",
+    "category": "ISBN",
+    "original_text": "The ISBN-10 is 0-7475-3269-9.",
+    "normalized_text": "The I S B N ten is zero seven four seven five three two six nine nine.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/333.wav"
+  },
+  {
+    "index": "334",
+    "category": "ISBN",
+    "original_text": "The ISBN 978-0-385-50420-5 is correct.",
+    "normalized_text": "The I S B N nine seven eight zero three eight five five zero four two zero five is correct.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/334.wav"
+  },
+  {
+    "index": "335",
+    "category": "ISBN",
+    "original_text": "The ISBN-13: 978-0-399-15559-7.",
+    "normalized_text": "The I S B N thirteen: nine seven eight zero three nine nine one five five five nine seven.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/335.wav"
+  },
+  {
+    "index": "336",
+    "category": "ISBN",
+    "original_text": "The ISBN-10: 0-385-50420-9.",
+    "normalized_text": "The I S B N ten: zero three eight five five zero four two zero nine.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/336.wav"
+  },
+  {
+    "index": "337",
+    "category": "ISBN",
+    "original_text": "The ISBN 978-0-545-01022-1 is assigned.",
+    "normalized_text": "The I S B N nine seven up zero five four five zero one zero two two one is assigned.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/337.wav"
+  },
+  {
+    "index": "338",
+    "category": "ISBN",
+    "original_text": "The ISBN-13 is 978-0-06-112008-4.",
+    "normalized_text": "The I S B N thirteen is nine seven eight zero zero six one one two zero zero eight four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/338.wav"
+  },
+  {
+    "index": "339",
+    "category": "ISBN",
+    "original_text": "The ISBN-10 is 0-06-112008-1.",
+    "normalized_text": "The I S B N ten is zero zero six one one two zero zero eight one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/339.wav"
+  },
+  {
+    "index": "340",
+    "category": "ISBN",
+    "original_text": "The ISBN 978-0-14-303995-0 is registered.",
+    "normalized_text": "The I S B N nine seven eight zero one four three zero three nine nine five zero is registered.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/ISBN/340.wav"
+  },
+  {
+    "index": "521",
+    "category": "Address",
+    "original_text": "The address is 123 Main St, Anytown, USA.",
+    "normalized_text": "The address is one two three Main Street, Anytown, U S A.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/521.wav"
+  },
+  {
+    "index": "522",
+    "category": "Address",
+    "original_text": "The office is at 456 Elm Avenue, Suite 200.",
+    "normalized_text": "The office is at four five six Elm Avenue, Suite two hundred.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/522.wav"
+  },
+  {
+    "index": "523",
+    "category": "Address",
+    "original_text": "The building is on 789 Oak Blvd, Apt 3B.",
+    "normalized_text": "The building is on seven eight nine Oak Boulevard, Apartment three B.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/523.wav"
+  },
+  {
+    "index": "524",
+    "category": "Address",
+    "original_text": "The location is 10 Downing Street, London.",
+    "normalized_text": "The location is ten Downing Street, London.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/524.wav"
+  },
+  {
+    "index": "525",
+    "category": "Address",
+    "original_text": "The store is at 321 Pine Rd, Unit 5.",
+    "normalized_text": "The store is at three two one Pine Road, Unit five.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/525.wav"
+  },
+  {
+    "index": "526",
+    "category": "Address",
+    "original_text": "The apartment is 202 Maple Lane, #4.",
+    "normalized_text": "The apartment is two zero two Maple Lane, number four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/526.wav"
+  },
+  {
+    "index": "527",
+    "category": "Address",
+    "original_text": "The house is at 55 Cedar Drive, Boston, MA.",
+    "normalized_text": "The house is at fifty five Cedar Drive, Boston, Massachusetts.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/527.wav"
+  },
+  {
+    "index": "528",
+    "category": "Address",
+    "original_text": "The business is on 1000 Broadway, Floor 12.",
+    "normalized_text": "The business is on one thousand Broadway, Floor twelve.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/528.wav"
+  },
+  {
+    "index": "529",
+    "category": "Address",
+    "original_text": "The warehouse is at 250 Industrial Park, Bldg 7.",
+    "normalized_text": "The warehouse is at two hundred fifty Industrial Park, Building seven.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/529.wav"
+  },
+  {
+    "index": "530",
+    "category": "Address",
+    "original_text": "The clinic is at 33 Park Place, Room 101.",
+    "normalized_text": "The clinic is at thirty three Park Place, Room one zero one.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/530.wav"
+  },
+  {
+    "index": "531",
+    "category": "Address",
+    "original_text": "The school is on 500 School St, District 2.",
+    "normalized_text": "The school is on five hundred School Street, District two.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/531.wav"
+  },
+  {
+    "index": "532",
+    "category": "Address",
+    "original_text": "The hotel is at 777 Sunset Blvd, Los Angeles.",
+    "normalized_text": "The hotel is at seven seven seven Sunset Boulevard, Los Angeles.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/532.wav"
+  },
+  {
+    "index": "533",
+    "category": "Address",
+    "original_text": "The restaurant is 89 River Road, Level 2.",
+    "normalized_text": "The restaurant is eighty nine River Road, Level two.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/533.wav"
+  },
+  {
+    "index": "534",
+    "category": "Address",
+    "original_text": "The facility is at 404 Northwest Ave, Unit 9.",
+    "normalized_text": "The facility is at four zero four Northwest Avenue, Unit nine.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/534.wav"
+  },
+  {
+    "index": "535",
+    "category": "Address",
+    "original_text": "The residence is 1234 Fifth Ave, Apt 10C.",
+    "normalized_text": "The residence is one two three four Fifth Avenue, Apartment ten C.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/535.wav"
+  },
+  {
+    "index": "536",
+    "category": "Address",
+    "original_text": "The shop is at 22 Market Square, Stall 3.",
+    "normalized_text": "The shop is at twenty two Market Square, Stall three.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/536.wav"
+  },
+  {
+    "index": "537",
+    "category": "Address",
+    "original_text": "The lab is on 15 Science Park, Wing B.",
+    "normalized_text": "The lab is on fifteen Science Park, Wing B.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/537.wav"
+  },
+  {
+    "index": "538",
+    "category": "Address",
+    "original_text": "The studio is at 88 Art Street, Loft 12.",
+    "normalized_text": "The studio is at eighty eight Art Street, Loft twelve.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/538.wav"
+  },
+  {
+    "index": "539",
+    "category": "Address",
+    "original_text": "The center is 600 Main Street, Block 4.",
+    "normalized_text": "The center is six hundred Main Street, Block four.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/539.wav"
+  },
+  {
+    "index": "540",
+    "category": "Address",
+    "original_text": "The office is at 999 Tech Drive, Suite 300.",
+    "normalized_text": "The office is at nine nine nine Tech Drive, Suite three hundred.",
+    "model": "Kokoro-82M",
+    "voice": "af_heart",
+    "audio_path": "audio/af_heart/Address/540.wav"
+  }
+]

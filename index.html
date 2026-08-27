@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PolyNorm TTS Evaluation</title>
+<style>
+:root{
+  --bg:#EDEFF1;
+  --surface:#FFFFFF;
+  --surface-2:#F5F6F8;
+  --ink:#191C22;
+  --ink-soft:#5B6270;
+  --ink-faint:#8A909B;
+  --line:#DADDE2;
+  --line-soft:#E9EBEE;
+  --accent:#A8752A;
+  --accent-ink:#6E4E1C;
+  --accent-soft:#F1E6D3;
+  --poor:#B3483D;
+  --good:#3F7D56;
+  --radius:14px;
+  --radius-sm:9px;
+  --font-ui:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
+  --font-serif:Georgia,"Iowan Old Style","Palatino Linotype","Book Antiqua",serif;
+  --shadow-card:0 1px 2px rgba(25,28,34,.04),0 10px 28px -14px rgba(25,28,34,.22);
+  --dur:150ms;
+}
+@media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important;transition-duration:.001ms !important} }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-ui);-webkit-font-smoothing:antialiased;font-size:15px}
+h1,h2,h3{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+::selection{background:var(--accent-soft);color:var(--accent-ink)}
+
+/* ---------- topbar ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1040px;margin:0 auto;padding:14px 20px 0;display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;margin-right:auto;padding-bottom:10px}
+.brand-mark{font-weight:800;font-size:18px;letter-spacing:-.01em}
+.brand-sub{font-size:12.5px;color:var(--ink-soft);margin-top:2px;max-width:38ch}
+.tabs{display:inline-flex;gap:2px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px;height:fit-content}
+.tab{border:0;background:transparent;padding:7px 14px;border-radius:999px;font-size:13.5px;font-weight:650;color:var(--ink-soft);cursor:pointer}
+.tab.active{background:var(--ink);color:#fff}
+.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--ink-soft);cursor:pointer;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.chip-btn:hover{border-color:var(--ink-faint);color:var(--ink)}
+.chip-btn strong{color:var(--ink);font-weight:650}
+.iconbtn{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:7px 11px;font-size:12.5px;font-weight:650;color:var(--ink);cursor:pointer;white-space:nowrap}
+.iconbtn:hover{background:var(--surface-2)}
+.iconbtn.danger{color:var(--poor);border-color:transparent;background:transparent;font-weight:550}
+.iconbtn.danger:hover{background:#FBEDEB}
+.iconbtn.circle{width:30px;height:30px;padding:0;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.progress-row{max-width:1040px;margin:0 auto;padding:9px 20px 12px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--ink-soft)}
+.progress-track{flex:1;height:5px;background:var(--line-soft);border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:999px;transition:width var(--dur)}
+
+/* ---------- banners ---------- */
+.banner{max-width:1040px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--accent-soft);border-bottom:1px solid var(--line);font-size:13px;color:var(--accent-ink)}
+.banner input{border:1px solid var(--line);border-radius:8px;padding:6px 9px;background:#fff;min-width:160px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(8px);background:var(--ink);color:#fff;font-size:13px;padding:9px 16px;border-radius:999px;box-shadow:var(--shadow-card);opacity:0;pointer-events:none;transition:opacity var(--dur),transform var(--dur);z-index:50}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- filters ---------- */
+.filters{max-width:1040px;margin:0 auto;padding:14px 20px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.field{display:flex;flex-direction:column;gap:4px}
+.field>label{font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+select,input[type=search],input[type=text]{border:1px solid var(--line);border-radius:9px;background:var(--surface);padding:8px 10px;font-size:13.5px;min-height:36px}
+.segmented{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;height:36px}
+.segmented button{border:0;background:var(--surface);padding:0 12px;font-size:13px;color:var(--ink-soft);cursor:pointer;border-right:1px solid var(--line)}
+.segmented button:last-child{border-right:0}
+.segmented button.active{background:var(--ink);color:#fff}
+.filters-meta{margin-left:auto;font-size:12.5px;color:var(--ink-soft);padding-bottom:9px;white-space:nowrap}
+
+/* ---------- main / rate card ---------- */
+main{max-width:760px;margin:22px auto 60px;padding:0 20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:26px 28px 24px}
+@keyframes cardIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.card.enter{animation:cardIn var(--dur) ease}
+.meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;align-items:center}
+.chip{display:inline-flex;align-items:center;font-size:11.5px;font-weight:650;letter-spacing:.01em;color:var(--ink-soft);background:var(--surface-2);border:1px solid var(--line-soft);border-radius:999px;padding:3px 10px}
+.chip.category{color:var(--accent-ink);background:var(--accent-soft);border-color:transparent}
+.done-badge{margin-left:auto;font-size:11.5px;color:var(--good);font-weight:650}
+
+.block{margin-bottom:20px}
+.block-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);font-weight:750;margin-bottom:7px}
+.written{font-family:var(--font-mono);font-size:15px;line-height:1.65;background:var(--surface-2);border-left:3px solid var(--line);border-radius:0 8px 8px 0;padding:10px 14px;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.spoken{font-family:var(--font-serif);font-style:italic;font-size:19px;line-height:1.55;color:var(--ink);word-break:break-word}
+.spoken mark{background:var(--accent-soft);color:var(--accent-ink);border-radius:4px;padding:0 3px;font-style:normal}
+
+.audio-wrap{margin-top:2px}
+audio{width:100%;height:38px;display:block}
+.audio-hint{font-size:11.5px;color:var(--ink-faint);margin-top:5px}
+.audio-missing{font-size:13px;color:var(--ink-soft);font-style:italic;padding:8px 0}
+
+.rate-block{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft)}
+.scale{display:flex;gap:8px;margin:4px 0 6px}
+.scale button{flex:1;border:1.5px solid var(--sc);background:var(--surface);border-radius:10px;padding:11px 0;font-weight:750;font-size:15px;color:var(--sc);cursor:pointer;transition:transform var(--dur),background var(--dur),color var(--dur)}
+.scale button:hover{transform:translateY(-1px)}
+.scale button.active{background:var(--sc);color:#fff;box-shadow:0 3px 10px -4px var(--sc)}
+.scale-labels{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-faint);margin-bottom:16px}
+
+.note-field{width:100%;min-height:58px;resize:vertical;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:13.5px;background:var(--surface)}
+.save-hint{font-size:11px;color:var(--good);height:15px;margin-top:5px;opacity:0;transition:opacity var(--dur);font-weight:600}
+.save-hint.show{opacity:1}
+
+.nav-row{display:flex;align-items:center;gap:8px;margin-top:20px;flex-wrap:wrap}
+.nav-row .spacer{flex:1 1 auto;min-width:8px}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:9px 14px;font-size:13.5px;font-weight:650;color:var(--ink);cursor:pointer;white-space:nowrap}
+.btn:hover:not(:disabled){background:var(--surface-2)}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.primary:hover:not(:disabled){background:#000}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--accent-ink)}
+.btn.ghost:hover:not(:disabled){background:var(--accent-soft)}
+.btn:disabled{opacity:.4;cursor:default}
+
+.shortcuts-line{font-size:11.5px;color:var(--ink-faint);margin-top:18px;text-align:center;line-height:1.9}
+.shortcuts-line kbd{font-family:var(--font-mono);background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:10.5px}
+
+.empty-card,.error-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:40px 28px;text-align:center;color:var(--ink-soft)}
+.empty-card h3,.error-card h3{color:var(--ink);margin-bottom:8px;font-size:16px}
+.error-card code{background:var(--surface-2);padding:2px 6px;border-radius:5px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink)}
+.error-card pre{white-space:pre-wrap;text-align:left;background:var(--surface-2);border-radius:8px;padding:10px 12px;font-size:11.5px;color:var(--ink-soft);margin-top:14px}
+
+/* ---------- summary ---------- */
+.summary-wrap{max-width:900px;margin:22px auto 60px;padding:0 20px;display:flex;flex-direction:column;gap:18px}
+.overview{display:flex;gap:30px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px;box-shadow:var(--shadow-card);flex-wrap:wrap}
+.ring-wrap{display:flex;align-items:center;gap:14px}
+.ring-num{font-size:24px;font-weight:800}
+.ring-sub{font-size:12.5px;color:var(--ink-soft)}
+.dist{display:flex;flex-direction:column;gap:7px;flex:1;min-width:220px}
+.dist-title{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);font-weight:750;margin-bottom:2px}
+.dist-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-soft)}
+.dist-row .lbl{width:14px;text-align:right;font-weight:700}
+.dist-track{flex:1;height:9px;background:var(--line-soft);border-radius:999px;overflow:hidden}
+.dist-fill{height:100%;border-radius:999px}
+.dist-row .n{width:26px;text-align:right;color:var(--ink-faint)}
+
+.section-title{font-size:13px;font-weight:700;color:var(--ink-soft);margin:2px 2px 0}
+table.catable{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-card)}
+.catable th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);font-weight:750;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.catable td{padding:11px 16px;border-bottom:1px solid var(--line-soft);font-size:13.5px;vertical-align:middle}
+.catable tr:last-child td{border-bottom:0}
+.mini-track{width:80px;height:6px;background:var(--line-soft);border-radius:999px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:8px}
+.mini-fill{height:100%;background:var(--accent);border-radius:999px}
+.avg-pill{display:inline-block;min-width:30px;text-align:center;color:#fff;font-weight:750;font-size:11.5px;border-radius:999px;padding:3px 8px}
+.avg-pill.na{background:var(--line-soft);color:var(--ink-faint)}
+.catable .rowbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 11px;font-size:12px;font-weight:650;cursor:pointer}
+.catable .rowbtn:hover{background:var(--surface-2)}
+
+/* ---------- shortcuts popover ---------- */
+.help-panel{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;border-radius:12px;padding:14px 16px;font-size:12.5px;box-shadow:var(--shadow-card);z-index:40;max-width:260px;line-height:1.9}
+.help-panel h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#cfd3da}
+.help-panel kbd{font-family:var(--font-mono);background:rgba(255,255,255,.12);border-radius:4px;padding:1px 5px;margin-right:6px}
+.help-panel .close{position:absolute;top:8px;right:10px;background:none;border:0;color:#cfd3da;cursor:pointer;font-size:14px}
+
+@media(max-width:640px){
+  .card{padding:20px 16px}
+  .spoken{font-size:17px}
+  .scale button{font-size:13px;padding:10px 0}
+  .overview{flex-direction:column;align-items:stretch}
+  .filters-meta{margin-left:0}
+  .done-badge{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">PolyNorm</span>
+      <span class="brand-sub">Listen to each clip and confirm the model read the normalized form correctly.</span>
+    </div>
+    <nav class="tabs">
+      <button class="tab active" id="tabRate" type="button">Rate</button>
+      <button class="tab" id="tabSummary" type="button">Summary</button>
+    </nav>
+    <div class="actions">
+      <button class="chip-btn" id="raterChip" type="button">Rater: <strong id="raterNameOut">add name</strong> ✎</button>
+      <button class="iconbtn" id="exportBtn" type="button">Export CSV</button>
+      <button class="iconbtn danger" id="clearBtn" type="button">Clear ratings</button>
+      <button class="iconbtn circle" id="helpBtn" type="button" title="Keyboard shortcuts" aria-label="Keyboard shortcuts">?</button>
+    </div>
+  </div>
+  <div class="progress-row">
+    <span id="progressText">0 of 0 rated</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+</header>
+
+<div class="banner" id="nameBanner" hidden>
+  <span>Add your name so teammates can tell your export apart.</span>
+  <input id="nameInput" type="text" placeholder="Your name" maxlength="40">
+  <button class="btn primary" id="nameSaveBtn" type="button">Save</button>
+  <button class="btn ghost" id="nameSkipBtn" type="button">Not now</button>
+</div>
+
+<div class="banner" id="raterEditBanner" hidden>
+  <span>Update your name</span>
+  <input id="raterEditInput" type="text" maxlength="40">
+  <button class="btn primary" id="raterEditSave" type="button">Save</button>
+  <button class="btn ghost" id="raterEditCancel" type="button">Cancel</button>
+</div>
+
+<div class="filters" id="filtersBar">
+  <div class="field"><label for="cat">Category</label><select id="cat"></select></div>
+  <div class="field"><label>Status</label>
+    <div class="segmented" id="statusSeg">
+      <button data-v="all" class="active" type="button">All</button>
+      <button data-v="unrated" type="button">Unrated</button>
+      <button data-v="rated" type="button">Rated</button>
+    </div>
+  </div>
+  <div class="field" style="flex:1;min-width:180px"><label for="q">Search</label><input id="q" type="search" placeholder="Search written or spoken text… ( / )"></div>
+  <span class="filters-meta" id="filtersMeta"></span>
+</div>
+
+<main id="mainArea"></main>
+
+<div class="help-panel" id="helpPanel" hidden>
+  <button class="close" id="helpClose" aria-label="Close" type="button">✕</button>
+  <h4>Shortcuts</h4>
+  <div><kbd>←</kbd><kbd>→</kbd> previous / next</div>
+  <div><kbd>1</kbd>–<kbd>5</kbd> rate this clip</div>
+  <div><kbd>U</kbd> jump to next unrated</div>
+  <div><kbd>Space</kbd> play / pause audio</div>
+  <div><kbd>/</kbd> focus search</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ================= storage ================= */
+function loadJSON(k, fallback){
+  try{ const v = localStorage.getItem(k); return v==null ? fallback : JSON.parse(v); }
+  catch(e){ return fallback; }
+}
+function saveJSON(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+
+const ratings = loadJSON('polynorm-team-ratings', {});
+let raterName = '';
+try{ raterName = localStorage.getItem('polynorm-rater-name') || ''; }catch(e){}
+const ui = loadJSON('polynorm-ui-state', { tab:'rate', cat:'', status:'all', q:'', lastKey:'' });
+
+function persistRatings(){ saveJSON('polynorm-team-ratings', ratings); }
+function persistRaterName(){ try{ localStorage.setItem('polynorm-rater-name', raterName); }catch(e){} }
+function persistUi(){ saveJSON('polynorm-ui-state', ui); }
+
+/* ================= state ================= */
+let data = [];
+let filtered = [];
+let pos = 0;
+let tab = ui.tab === 'summary' ? 'summary' : 'rate';
+
+/* ================= utils ================= */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function keyOf(e){ return e.model + '||' + e.index; }
+function normTok(t){ return t.toLowerCase().replace(/^[^a-z0-9]+|[^a-z0-9]+$/gi,''); }
+function ratingColor(v){
+  const t = Math.max(0, Math.min(1, (v-1)/4));
+  const hue = 8 + t*(150-8);
+  return 'hsl(' + hue.toFixed(0) + ' 46% 38%)';
+}
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+/* ================= word-diff highlight ================= */
+function lcsMask(a, b){
+  const n=a.length, m=b.length;
+  const dp = new Array(n+1);
+  for(let i=0;i<=n;i++) dp[i] = new Int16Array(m+1);
+  for(let i=n-1;i>=0;i--){
+    for(let j=m-1;j>=0;j--){
+      dp[i][j] = a[i]===b[j] ? dp[i+1][j+1]+1 : Math.max(dp[i+1][j], dp[i][j+1]);
+    }
+  }
+  const kept = new Array(m).fill(false);
+  let i=0,j=0;
+  while(i<n && j<m){
+    if(a[i]===b[j]){ kept[j]=true; i++; j++; }
+    else if(dp[i+1][j] >= dp[i][j+1]) i++;
+    else j++;
+  }
+  return kept;
+}
+function diffHighlight(origStr, normStr){
+  origStr = origStr || ''; normStr = normStr || '';
+  const origWords = (origStr.match(/\S+/g) || []).map(normTok);
+  const segs = normStr.match(/\S+\s*/g) || [];
+  if(!segs.length) return esc(normStr);
+  const words = segs.map(s => (s.match(/\S+/) || [''])[0]);
+  const wordsNorm = words.map(normTok);
+  const kept = lcsMask(origWords, wordsNorm);
+  const leading = (normStr.match(/^\s+/) || [''])[0];
+  let html = esc(leading);
+  let i = 0;
+  while(i < segs.length){
+    const changed = !kept[i];
+    let j = i, group = '';
+    while(j < segs.length && (!kept[j]) === changed){ group += segs[j]; j++; }
+    const g = esc(group);
+    html += changed ? ('<mark>' + g + '</mark>') : g;
+    i = j;
+  }
+  return html;
+}
+
+/* ================= dom refs ================= */
+const $ = id => document.getElementById(id);
+const tabRate = $('tabRate'), tabSummary = $('tabSummary');
+const raterChip = $('raterChip'), raterNameOut = $('raterNameOut');
+const exportBtn = $('exportBtn'), clearBtn = $('clearBtn'), helpBtn = $('helpBtn');
+const progressText = $('progressText'), progressFill = $('progressFill');
+const nameBanner = $('nameBanner'), nameInput = $('nameInput'), nameSaveBtn = $('nameSaveBtn'), nameSkipBtn = $('nameSkipBtn');
+const raterEditBanner = $('raterEditBanner'), raterEditInput = $('raterEditInput'), raterEditSave = $('raterEditSave'), raterEditCancel = $('raterEditCancel');
+const filtersBar = $('filtersBar'), catSel = $('cat'), statusSeg = $('statusSeg'), qInput = $('q'), filtersMeta = $('filtersMeta');
+const mainArea = $('mainArea');
+const helpPanel = $('helpPanel'), helpClose = $('helpClose');
+
+/* ================= filtering ================= */
+function computeFiltered(){
+  const c = catSel.value, qv = qInput.value.toLowerCase().trim(), st = ui.status;
+  filtered = data.filter(e=>{
+    if(c && e.category !== c) return false;
+    if(qv && !((e.original_text+' '+e.normalized_text+' '+e.category).toLowerCase().includes(qv))) return false;
+    const r = ratings[keyOf(e)];
+    if(st==='rated' && !(r && r.rating)) return false;
+    if(st==='unrated' && (r && r.rating)) return false;
+    return true;
+  });
+  if(pos >= filtered.length) pos = Math.max(0, filtered.length-1);
+}
+function applyFilters(fromControls){
+  ui.cat = catSel.value; ui.status = ui.status || 'all'; ui.q = qInput.value; persistUi();
+  computeFiltered();
+  renderMain();
+}
+
+/* ================= overall progress ================= */
+function overallCounts(){
+  let rated = 0;
+  for(const e of data){ const r = ratings[keyOf(e)]; if(r && r.rating) rated++; }
+  return { rated, total: data.length };
+}
+function renderProgress(){
+  const { rated, total } = overallCounts();
+  const pct = total ? Math.round(rated/total*100) : 0;
+  progressText.textContent = rated + ' of ' + total + ' rated overall (' + pct + '%)';
+  progressFill.style.width = pct + '%';
+}
+
+/* ================= rater name ================= */
+function refreshRaterChip(){
+  raterNameOut.textContent = raterName ? raterName : 'add name';
+}
+function openNameBanner(){ nameBanner.hidden = false; nameInput.value = ''; nameInput.focus(); }
+function closeNameBanner(){ nameInput.blur(); nameBanner.hidden = true; }
+raterChip.addEventListener('click', ()=>{
+  raterEditBanner.hidden = false;
+  raterEditInput.value = raterName;
+  raterEditInput.focus();
+});
+raterEditSave.addEventListener('click', ()=>{
+  raterName = raterEditInput.value.trim();
+  persistRaterName(); refreshRaterChip();
+  raterEditInput.blur(); raterEditBanner.hidden = true;
+  showToast('Name saved');
+});
+raterEditCancel.addEventListener('click', ()=>{ raterEditInput.blur(); raterEditBanner.hidden = true; });
+raterEditInput.addEventListener('keydown', e=>{
+  if(e.key==='Enter') raterEditSave.click();
+  if(e.key==='Escape') raterEditCancel.click();
+});
+nameSaveBtn.addEventListener('click', ()=>{
+  raterName = nameInput.value.trim();
+  persistRaterName(); refreshRaterChip(); closeNameBanner();
+  if(raterName) showToast('Thanks, ' + raterName + '!');
+});
+nameSkipBtn.addEventListener('click', ()=>{
+  try{ localStorage.setItem('polynorm-name-prompt-dismissed','1'); }catch(e){}
+  closeNameBanner();
+});
+nameInput.addEventListener('keydown', e=>{ if(e.key==='Enter') nameSaveBtn.click(); });
+
+/* ================= tabs ================= */
+function setTab(next){
+  tab = next; ui.tab = next; persistUi();
+  tabRate.classList.toggle('active', tab==='rate');
+  tabSummary.classList.toggle('active', tab==='summary');
+  filtersBar.hidden = tab !== 'rate';
+  renderMain();
+}
+tabRate.addEventListener('click', ()=>setTab('rate'));
+tabSummary.addEventListener('click', ()=>setTab('summary'));
+
+/* ================= rating / notes ================= */
+function setRating(e, r){
+  const k = keyOf(e);
+  ratings[k] = ratings[k] || {};
+  ratings[k].rating = r;
+  persistRatings();
+  renderProgress();
+  renderRateCard();
+}
+function setNote(e, v){
+  const k = keyOf(e);
+  ratings[k] = ratings[k] || {};
+  ratings[k].note = v;
+  persistRatings();
+}
+
+/* ================= rate view ================= */
+function currentAudio(){ return mainArea.querySelector('audio'); }
+
+function renderRateCard(){
+  if(!filtered.length){
+    mainArea.innerHTML =
+      '<div class="empty-card"><h3>Nothing matches these filters</h3>' +
+      '<p>Try a different category, clear the search, or switch the status filter.</p>' +
+      '<button class="btn" id="clearFiltersBtn" type="button">Clear filters</button></div>';
+    const b = $('clearFiltersBtn');
+    if(b) b.addEventListener('click', ()=>{
+      catSel.value=''; qInput.value=''; setStatus('all'); applyFilters();
+    });
+    filtersMeta.textContent = '';
+    return;
+  }
+  const e = filtered[pos];
+  const r = ratings[keyOf(e)] || {};
+  ui.lastKey = keyOf(e); persistUi();
+
+  const ratedInView = filtered.filter(x=>{ const rr=ratings[keyOf(x)]; return rr && rr.rating; }).length;
+  filtersMeta.textContent = 'Showing ' + filtered.length + ' of ' + data.length + ' \u2022 ' + ratedInView + ' rated in this view';
+
+  const scaleLabels = ['Garbled','Off','Understandable','Natural','Perfect'];
+  let scaleBtns = '';
+  for(let i=1;i<=5;i++){
+    const c = ratingColor(i);
+    scaleBtns += '<button type="button" style="--sc:' + c + '" class="' + (r.rating===i?'active':'') + '" data-r="' + i + '" title="' + scaleLabels[i-1] + '">' + i + '</button>';
+  }
+
+  const audioBlock = e.audio_path
+    ? '<div class="audio-wrap"><audio controls preload="none" src="' + esc(e.audio_path) + '"></audio>' +
+      '<div class="audio-hint" id="audioHint">Press <kbd>Space</kbd> to play or pause.</div></div>'
+    : '<div class="audio-missing">No audio file for this example.</div>';
+
+  const doneBadge = ratedInView === filtered.length ? '<span class="done-badge">\u2713 This view is fully rated</span>' : '';
+
+  mainArea.innerHTML =
+    '<div class="card enter">' +
+      '<div class="meta-row">' +
+        '<span class="chip">#' + esc(e.index) + '</span>' +
+        '<span class="chip category">' + esc(e.category) + '</span>' +
+        '<span class="chip">' + esc(e.model) + (e.voice? ' \u00b7 '+esc(e.voice):'') + '</span>' +
+        doneBadge +
+      '</div>' +
+      '<div class="block"><div class="block-label">Written form</div><div class="written">' + esc(e.original_text) + '</div></div>' +
+      '<div class="block"><div class="block-label">Should be read aloud as</div><div class="spoken">' + diffHighlight(e.original_text, e.normalized_text) + '</div></div>' +
+      '<div class="block"><div class="block-label">Listen</div>' + audioBlock + '</div>' +
+      '<div class="rate-block">' +
+        '<div class="block-label">Rate the reading</div>' +
+        '<div class="scale">' + scaleBtns + '</div>' +
+        '<div class="scale-labels"><span>' + scaleLabels[0] + '</span><span>' + scaleLabels[4] + '</span></div>' +
+        '<textarea class="note-field" id="noteField" placeholder="Optional note \u2014 what went wrong, or what stood out">' + esc(r.note||'') + '</textarea>' +
+        '<div class="save-hint" id="saveHint">Saved</div>' +
+      '</div>' +
+      '<div class="nav-row">' +
+        '<button class="btn" id="prevBtn" type="button" ' + (pos===0?'disabled':'') + '>\u2190 Previous</button>' +
+        '<button class="btn" id="nextBtn" type="button" ' + (pos>=filtered.length-1?'disabled':'') + '>Next \u2192</button>' +
+        '<div class="spacer"></div>' +
+        '<button class="btn ghost" id="unratedBtn" type="button">Next unrated \u21b7</button>' +
+      '</div>' +
+      '<div class="shortcuts-line"><kbd>\u2190</kbd><kbd>\u2192</kbd> navigate \u2022 <kbd>1</kbd>-<kbd>5</kbd> rate \u2022 <kbd>U</kbd> next unrated \u2022 <kbd>Space</kbd> play</div>' +
+    '</div>';
+
+  mainArea.querySelectorAll('.scale button').forEach(btn=>{
+    btn.addEventListener('click', ()=> setRating(e, parseInt(btn.dataset.r,10)));
+  });
+  const noteField = $('noteField'), saveHint = $('saveHint');
+  let noteTimer = null, hintTimer = null;
+  noteField.addEventListener('input', ()=>{
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(()=>{
+      setNote(e, noteField.value);
+      saveHint.classList.add('show');
+      clearTimeout(hintTimer);
+      hintTimer = setTimeout(()=>saveHint.classList.remove('show'), 1400);
+    }, 400);
+  });
+  $('prevBtn').addEventListener('click', ()=> goTo(pos-1));
+  $('nextBtn').addEventListener('click', ()=> goTo(pos+1));
+  $('unratedBtn').addEventListener('click', jumpNextUnrated);
+}
+
+function goTo(newPos){
+  if(newPos < 0 || newPos >= filtered.length) return;
+  pos = newPos;
+  renderRateCard();
+}
+function jumpNextUnrated(){
+  if(!filtered.length) return;
+  for(let step=1; step<=filtered.length; step++){
+    const idx = (pos+step) % filtered.length;
+    const r = ratings[keyOf(filtered[idx])];
+    if(!(r && r.rating)){ pos = idx; renderRateCard(); return; }
+  }
+  showToast('Everything in this view is rated');
+}
+
+/* ================= summary view ================= */
+function renderSummary(){
+  const total = data.length;
+  let rated = 0, sum = 0, dist = [0,0,0,0,0];
+  const byCat = {};
+  for(const e of data){
+    byCat[e.category] = byCat[e.category] || { total:0, rated:0, sum:0 };
+    byCat[e.category].total++;
+    const r = ratings[keyOf(e)];
+    if(r && r.rating){
+      rated++; sum += r.rating; dist[r.rating-1]++;
+      byCat[e.category].rated++; byCat[e.category].sum += r.rating;
+    }
+  }
+  const pct = total ? Math.round(rated/total*100) : 0;
+  const overallAvg = rated ? (sum/rated) : null;
+  const R = total===0 ? 0 : 46;
+  const circumference = 2*Math.PI*R;
+  const dash = total ? circumference*pct/100 : 0;
+
+  let distHtml = '<div class="dist"><div class="dist-title">Rating distribution</div>';
+  const labels = ['1 \u2014 Garbled','2 \u2014 Off','3 \u2014 Understandable','4 \u2014 Natural','5 \u2014 Perfect'];
+  for(let i=0;i<5;i++){
+    const c = ratingColor(i+1);
+    const w = rated ? Math.round(dist[i]/rated*100) : 0;
+    distHtml += '<div class="dist-row" title="' + labels[i] + '"><span class="lbl">' + (i+1) + '</span>' +
+      '<div class="dist-track"><div class="dist-fill" style="width:' + w + '%;background:' + c + '"></div></div>' +
+      '<span class="n">' + dist[i] + '</span></div>';
+  }
+  distHtml += '</div>';
+
+  const overviewHtml =
+    '<div class="overview">' +
+      '<div class="ring-wrap">' +
+        '<svg width="104" height="104" viewBox="0 0 104 104">' +
+          '<circle cx="52" cy="52" r="' + R + '" fill="none" stroke="var(--line-soft)" stroke-width="10"/>' +
+          '<circle cx="52" cy="52" r="' + R + '" fill="none" stroke="var(--accent)" stroke-width="10" ' +
+            'stroke-dasharray="' + dash.toFixed(1) + ' ' + circumference.toFixed(1) + '" stroke-linecap="round" ' +
+            'transform="rotate(-90 52 52)"/>' +
+          '<text x="52" y="58" text-anchor="middle" font-size="20" font-weight="800" fill="var(--ink)">' + pct + '%</text>' +
+        '</svg>' +
+        '<div><div class="ring-num">' + rated + ' / ' + total + '</div><div class="ring-sub">examples rated' + (overallAvg? ' \u2022 avg ' + overallAvg.toFixed(2) : '') + '</div></div>' +
+      '</div>' +
+      distHtml +
+    '</div>';
+
+  const cats = Object.keys(byCat).sort();
+  let rows = '';
+  for(const c of cats){
+    const b = byCat[c];
+    const catPct = b.total ? Math.round(b.rated/b.total*100) : 0;
+    const avg = b.rated ? (b.sum/b.rated) : null;
+    const avgHtml = avg==null ? '<span class="avg-pill na">\u2013</span>' : '<span class="avg-pill" style="background:' + ratingColor(avg) + '">' + avg.toFixed(1) + '</span>';
+    const label = b.rated < b.total ? 'Review unrated' : 'Review';
+    rows += '<tr>' +
+      '<td>' + esc(c) + '</td>' +
+      '<td><span class="mini-track"><span class="mini-fill" style="width:' + catPct + '%"></span></span>' + b.rated + '/' + b.total + '</td>' +
+      '<td>' + avgHtml + '</td>' +
+      '<td><button class="rowbtn" data-cat="' + esc(c) + '" data-mode="' + (b.rated<b.total?'unrated':'all') + '" type="button">' + label + '</button></td>' +
+    '</tr>';
+  }
+
+  mainArea.innerHTML =
+    '<div class="summary-wrap">' +
+      overviewHtml +
+      '<div class="section-title">By category</div>' +
+      '<table class="catable"><thead><tr><th>Category</th><th>Rated</th><th>Avg</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>' +
+    '</div>';
+
+  mainArea.querySelectorAll('.rowbtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const cat = btn.dataset.cat, mode = btn.dataset.mode;
+      catSel.value = cat; qInput.value = ''; setStatus(mode==='unrated' ? 'unrated' : 'all');
+      setTab('rate');
+      computeFiltered();
+      pos = 0;
+      renderRateCard();
+    });
+  });
+}
+
+/* ================= main render dispatch ================= */
+function renderMain(){
+  renderProgress();
+  if(tab === 'summary') renderSummary();
+  else renderRateCard();
+}
+
+/* ================= status segmented control ================= */
+function setStatus(v){
+  ui.status = v; persistUi();
+  statusSeg.querySelectorAll('button').forEach(b=> b.classList.toggle('active', b.dataset.v===v));
+}
+statusSeg.addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  setStatus(b.dataset.v); computeFiltered(); pos=0; renderRateCard();
+});
+
+/* ================= export / clear ================= */
+exportBtn.addEventListener('click', ()=>{
+  const rows = [['rater','model','index','category','rating','note','original_text','normalized_text']];
+  for(const e of data){
+    const r = ratings[keyOf(e)];
+    if(r && (r.rating || r.note)){
+      rows.push([raterName, e.model, e.index, e.category, r.rating||'', r.note||'', e.original_text, e.normalized_text]);
+    }
+  }
+  const csv = rows.map(row => row.map(x => '"' + String(x).replaceAll('"','""') + '"').join(',')).join('\n');
+  const slug = (raterName || 'anon').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const date = new Date().toISOString().slice(0,10);
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
+  a.download = 'polynorm-ratings-' + slug + '-' + date + '.csv';
+  a.click();
+  showToast('CSV exported');
+});
+clearBtn.addEventListener('click', ()=>{
+  if(confirm('Clear all of your ratings in this browser? This cannot be undone.')){
+    try{ localStorage.removeItem('polynorm-team-ratings'); }catch(e){}
+    location.reload();
+  }
+});
+
+/* ================= help panel ================= */
+helpBtn.addEventListener('click', ()=>{ helpPanel.hidden = !helpPanel.hidden; });
+helpClose.addEventListener('click', ()=>{ helpPanel.hidden = true; });
+
+/* ================= keyboard shortcuts ================= */
+document.addEventListener('keydown', e=>{
+  const tagName = (document.activeElement && document.activeElement.tagName) || '';
+  const typing = tagName==='INPUT' || tagName==='TEXTAREA' || tagName==='SELECT';
+  if(e.key==='Escape'){
+    helpPanel.hidden = true;
+    if(document.activeElement) document.activeElement.blur();
+    return;
+  }
+  if(e.key==='/' && !typing){ e.preventDefault(); qInput.focus(); return; }
+  if(typing) return;
+  if(tab!=='rate') return;
+  if(e.key==='ArrowLeft'){ e.preventDefault(); goTo(pos-1); }
+  else if(e.key==='ArrowRight'){ e.preventDefault(); goTo(pos+1); }
+  else if(e.key>='1' && e.key<='5'){
+    if(!filtered.length) return;
+    setRating(filtered[pos], parseInt(e.key,10));
+  }
+  else if(e.key==='u' || e.key==='U'){ jumpNextUnrated(); }
+  else if(e.key==='?'){ helpPanel.hidden = !helpPanel.hidden; }
+  else if(e.key===' '){
+    const audio = currentAudio();
+    if(audio){ e.preventDefault(); audio.paused ? audio.play() : audio.pause(); }
+  }
+});
+
+/* ================= init ================= */
+async function init(){
+  catSel.addEventListener('change', ()=>{ applyFilters(); pos=0; renderRateCard(); });
+  qInput.addEventListener('input', ()=>{ applyFilters(); pos=0; renderRateCard(); });
+
+  refreshRaterChip();
+  setStatus(ui.status || 'all');
+  qInput.value = ui.q || '';
+  tabRate.classList.toggle('active', tab==='rate');
+  tabSummary.classList.toggle('active', tab==='summary');
+  filtersBar.hidden = tab !== 'rate';
+
+  let dismissed = false;
+  try{ dismissed = localStorage.getItem('polynorm-name-prompt-dismissed')==='1'; }catch(e){}
+  if(!raterName && !dismissed) openNameBanner();
+
+  try{
+    const res = await fetch('web_data.json');
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+    if(!Array.isArray(data)) throw new Error('web_data.json did not contain a list of examples');
+  }catch(err){
+    mainArea.innerHTML =
+      '<div class="error-card"><h3>Couldn\u2019t load web_data.json</h3>' +
+      '<p>Serve this folder with a local web server rather than opening the file directly, and make sure <code>web_data.json</code> sits next to <code>index.html</code>.</p>' +
+      '<p><code>python -m http.server 8000</code> then open <code>http://localhost:8000</code></p>' +
+      '<pre>' + esc(String(err && err.message || err)) + '</pre></div>';
+    filtersBar.hidden = true;
+    return;
+  }
+
+  const cats = [...new Set(data.map(e=>e.category))].sort();
+  catSel.innerHTML = '<option value="">All categories</option>' + cats.map(c=>'<option>'+esc(c)+'</option>').join('');
+  catSel.value = ui.cat && cats.includes(ui.cat) ? ui.cat : '';
+
+  computeFiltered();
+  if(ui.lastKey){
+    const idx = filtered.findIndex(e=>keyOf(e)===ui.lastKey);
+    if(idx>=0) pos = idx;
+  }
+  renderMain();
+}
+init();
+})();
+</script>
+</body>
+</html>
