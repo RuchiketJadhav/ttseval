@@ -35,6 +35,8 @@ h1,h2,h3{margin:0}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 ::selection{background:var(--accent-soft);color:var(--accent-ink)}
+/* the hidden attribute must win over any component's own `display` value (e.g. .banner, .filters use display:flex) */
+[hidden]{display:none !important}
 
 /* ---------- topbar ---------- */
 .topbar{position:sticky;top:0;z-index:30;background:var(--surface);border-bottom:1px solid var(--line)}
