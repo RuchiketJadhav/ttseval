@@ -153,6 +153,21 @@ table.catable{width:100%;border-collapse:collapse;background:var(--surface);bord
 .catable .rowbtn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 11px;font-size:12px;font-weight:650;cursor:pointer}
 .catable .rowbtn:hover{background:var(--surface-2)}
 
+.pivot-hint{font-size:12px;color:var(--ink-faint);margin:-8px 2px 0}
+.pivot-scroll{overflow-x:auto;border-radius:var(--radius)}
+table.pivot-table{min-width:100%;border-collapse:collapse}
+.pivot-table th{white-space:nowrap}
+.pivot-table td{padding:7px 8px;vertical-align:middle}
+.pivot-table th:first-child,.pivot-table td:first-child{position:sticky;left:0;background:var(--surface);z-index:1;box-shadow:1px 0 0 var(--line-soft)}
+.pivot-table th:first-child{background:var(--surface-2)}
+.pivot-catname{font-weight:650;white-space:nowrap;padding-right:14px !important}
+.pivot-cell{display:flex;flex-direction:column;align-items:center;gap:1px;width:100%;min-width:66px;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 4px;cursor:pointer}
+.pivot-cell:hover{background:var(--surface-2);border-color:var(--ink-faint)}
+.pivot-cell .pivot-avg{font-weight:750;font-size:13px;color:var(--pc,var(--ink))}
+.pivot-cell.unrated .pivot-avg{color:var(--ink-faint)}
+.pivot-cell .pivot-count{font-size:10.5px;color:var(--ink-faint)}
+.pivot-cell.empty{border:1px dashed var(--line-soft);color:var(--ink-faint);cursor:default;justify-content:center;font-size:12px;min-width:66px}
+
 /* ---------- shortcuts popover ---------- */
 .help-panel{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;border-radius:12px;padding:14px 16px;font-size:12.5px;box-shadow:var(--shadow-card);z-index:40;max-width:260px;line-height:1.9}
 .help-panel h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#cfd3da}
@@ -210,6 +225,7 @@ table.catable{width:100%;border-collapse:collapse;background:var(--surface);bord
 
 <div class="filters" id="filtersBar">
   <div class="field"><label for="cat">Category</label><select id="cat"></select></div>
+  <div class="field"><label for="model">Model</label><select id="model"></select></div>
   <div class="field"><label>Status</label>
     <div class="segmented" id="statusSeg">
       <button data-v="all" class="active" type="button">All</button>
@@ -249,7 +265,7 @@ function saveJSON(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch
 const ratings = loadJSON('polynorm-team-ratings', {});
 let raterName = '';
 try{ raterName = localStorage.getItem('polynorm-rater-name') || ''; }catch(e){}
-const ui = loadJSON('polynorm-ui-state', { tab:'rate', cat:'', status:'all', q:'', lastKey:'' });
+const ui = loadJSON('polynorm-ui-state', { tab:'rate', cat:'', model:'', status:'all', q:'', lastKey:'' });
 
 function persistRatings(){ saveJSON('polynorm-team-ratings', ratings); }
 function persistRaterName(){ try{ localStorage.setItem('polynorm-rater-name', raterName); }catch(e){} }
@@ -327,15 +343,16 @@ const exportBtn = $('exportBtn'), clearBtn = $('clearBtn'), helpBtn = $('helpBtn
 const progressText = $('progressText'), progressFill = $('progressFill');
 const nameBanner = $('nameBanner'), nameInput = $('nameInput'), nameSaveBtn = $('nameSaveBtn'), nameSkipBtn = $('nameSkipBtn');
 const raterEditBanner = $('raterEditBanner'), raterEditInput = $('raterEditInput'), raterEditSave = $('raterEditSave'), raterEditCancel = $('raterEditCancel');
-const filtersBar = $('filtersBar'), catSel = $('cat'), statusSeg = $('statusSeg'), qInput = $('q'), filtersMeta = $('filtersMeta');
+const filtersBar = $('filtersBar'), catSel = $('cat'), modelSel = $('model'), statusSeg = $('statusSeg'), qInput = $('q'), filtersMeta = $('filtersMeta');
 const mainArea = $('mainArea');
 const helpPanel = $('helpPanel'), helpClose = $('helpClose');
 
 /* ================= filtering ================= */
 function computeFiltered(){
-  const c = catSel.value, qv = qInput.value.toLowerCase().trim(), st = ui.status;
+  const c = catSel.value, mv = modelSel.value, qv = qInput.value.toLowerCase().trim(), st = ui.status;
   filtered = data.filter(e=>{
     if(c && e.category !== c) return false;
+    if(mv && e.model !== mv) return false;
     if(qv && !((e.original_text+' '+e.normalized_text+' '+e.category).toLowerCase().includes(qv))) return false;
     const r = ratings[keyOf(e)];
     if(st==='rated' && !(r && r.rating)) return false;
@@ -345,7 +362,7 @@ function computeFiltered(){
   if(pos >= filtered.length) pos = Math.max(0, filtered.length-1);
 }
 function applyFilters(fromControls){
-  ui.cat = catSel.value; ui.status = ui.status || 'all'; ui.q = qInput.value; persistUi();
+  ui.cat = catSel.value; ui.model = modelSel.value; ui.status = ui.status || 'all'; ui.q = qInput.value; persistUi();
   computeFiltered();
   renderMain();
 }
@@ -525,14 +542,21 @@ function jumpNextUnrated(){
 function renderSummary(){
   const total = data.length;
   let rated = 0, sum = 0, dist = [0,0,0,0,0];
-  const byCat = {};
+  const byModel = {};
+  const byCatModel = {}; // byCatModel[category][model] = {total,rated,sum}
+  const modelSet = new Set(), catSet = new Set();
   for(const e of data){
-    byCat[e.category] = byCat[e.category] || { total:0, rated:0, sum:0 };
-    byCat[e.category].total++;
+    modelSet.add(e.model); catSet.add(e.category);
+    byModel[e.model] = byModel[e.model] || { total:0, rated:0, sum:0 };
+    byModel[e.model].total++;
+    byCatModel[e.category] = byCatModel[e.category] || {};
+    byCatModel[e.category][e.model] = byCatModel[e.category][e.model] || { total:0, rated:0, sum:0 };
+    byCatModel[e.category][e.model].total++;
     const r = ratings[keyOf(e)];
     if(r && r.rating){
       rated++; sum += r.rating; dist[r.rating-1]++;
-      byCat[e.category].rated++; byCat[e.category].sum += r.rating;
+      byModel[e.model].rated++; byModel[e.model].sum += r.rating;
+      byCatModel[e.category][e.model].rated++; byCatModel[e.category][e.model].sum += r.rating;
     }
   }
   const pct = total ? Math.round(rated/total*100) : 0;
@@ -567,35 +591,84 @@ function renderSummary(){
       distHtml +
     '</div>';
 
-  const cats = Object.keys(byCat).sort();
-  let rows = '';
-  for(const c of cats){
-    const b = byCat[c];
-    const catPct = b.total ? Math.round(b.rated/b.total*100) : 0;
+  function buildRow(label, b, extraAttrs){
+    const pct = b.total ? Math.round(b.rated/b.total*100) : 0;
     const avg = b.rated ? (b.sum/b.rated) : null;
     const avgHtml = avg==null ? '<span class="avg-pill na">\u2013</span>' : '<span class="avg-pill" style="background:' + ratingColor(avg) + '">' + avg.toFixed(1) + '</span>';
-    const label = b.rated < b.total ? 'Review unrated' : 'Review';
-    rows += '<tr>' +
-      '<td>' + esc(c) + '</td>' +
-      '<td><span class="mini-track"><span class="mini-fill" style="width:' + catPct + '%"></span></span>' + b.rated + '/' + b.total + '</td>' +
+    const btnLabel = b.rated < b.total ? 'Review unrated' : 'Review';
+    return '<tr>' +
+      '<td>' + esc(label) + '</td>' +
+      '<td><span class="mini-track"><span class="mini-fill" style="width:' + pct + '%"></span></span>' + b.rated + '/' + b.total + '</td>' +
       '<td>' + avgHtml + '</td>' +
-      '<td><button class="rowbtn" data-cat="' + esc(c) + '" data-mode="' + (b.rated<b.total?'unrated':'all') + '" type="button">' + label + '</button></td>' +
+      '<td><button class="rowbtn" ' + extraAttrs + ' data-mode="' + (b.rated<b.total?'unrated':'all') + '" type="button">' + btnLabel + '</button></td>' +
     '</tr>';
   }
+
+  const models = [...modelSet].sort();
+  const cats = [...catSet].sort();
+
+  let modelRows = '';
+  for(const m of models){
+    modelRows += buildRow(m, byModel[m], 'data-model="' + esc(m) + '"');
+  }
+
+  function pivotCell(cat, model){
+    const b = byCatModel[cat] && byCatModel[cat][model];
+    if(!b || b.total===0) return '<span class="pivot-cell empty">n/a</span>';
+    const avg = b.rated ? (b.sum/b.rated) : null;
+    const mode = b.rated < b.total ? 'unrated' : 'all';
+    const style = avg==null ? '' : ' style="--pc:' + ratingColor(avg) + '"';
+    return '<button class="pivot-cell' + (avg==null?' unrated':'') + '"' + style +
+      ' data-cat="' + esc(cat) + '" data-model="' + esc(model) + '" data-mode="' + mode + '" type="button" ' +
+      'title="' + esc(model) + ' \u2014 ' + esc(cat) + '">' +
+      '<span class="pivot-avg">' + (avg==null ? '\u2013' : avg.toFixed(1)) + '</span>' +
+      '<span class="pivot-count">' + b.rated + '/' + b.total + '</span>' +
+    '</button>';
+  }
+  let pivotRows = '';
+  for(const c of cats){
+    pivotRows += '<tr><td class="pivot-catname">' + esc(c) + '</td>';
+    for(const m of models){ pivotRows += '<td>' + pivotCell(c, m) + '</td>'; }
+    pivotRows += '</tr>';
+  }
+  const pivotHead = '<th>Category</th>' + models.map(m=>'<th>'+esc(m)+'</th>').join('');
 
   mainArea.innerHTML =
     '<div class="summary-wrap">' +
       overviewHtml +
-      '<div class="section-title">By category</div>' +
-      '<table class="catable"><thead><tr><th>Category</th><th>Rated</th><th>Avg</th><th></th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<div class="section-title">By model</div>' +
+      '<table class="catable"><thead><tr><th>Model</th><th>Rated</th><th>Avg</th><th></th></tr></thead><tbody>' + modelRows + '</tbody></table>' +
+      '<div class="section-title">Category \u00d7 model</div>' +
+      '<div class="pivot-hint">Each cell is that model\u2019s average for the category. Click a cell to review those clips.</div>' +
+      '<div class="pivot-scroll"><table class="catable pivot-table"><thead><tr>' + pivotHead + '</tr></thead><tbody>' + pivotRows + '</tbody></table></div>' +
     '</div>';
 
   mainArea.querySelectorAll('.rowbtn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
-      const cat = btn.dataset.cat, mode = btn.dataset.mode;
-      catSel.value = cat; qInput.value = ''; setStatus(mode==='unrated' ? 'unrated' : 'all');
+      const mode = btn.dataset.mode;
+      qInput.value = '';
+      if(btn.dataset.cat != null){
+        catSel.value = btn.dataset.cat;
+      } else if(btn.dataset.model != null){
+        catSel.value = '';
+        modelSel.value = btn.dataset.model;
+      }
+      setStatus(mode==='unrated' ? 'unrated' : 'all');
       setTab('rate');
-      computeFiltered();
+      applyFilters();
+      pos = 0;
+      renderRateCard();
+    });
+  });
+
+  mainArea.querySelectorAll('.pivot-cell[data-cat]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      qInput.value = '';
+      catSel.value = btn.dataset.cat;
+      modelSel.value = btn.dataset.model;
+      setStatus(btn.dataset.mode==='unrated' ? 'unrated' : 'all');
+      setTab('rate');
+      applyFilters();
       pos = 0;
       renderRateCard();
     });
@@ -677,6 +750,7 @@ document.addEventListener('keydown', e=>{
 /* ================= init ================= */
 async function init(){
   catSel.addEventListener('change', ()=>{ applyFilters(); pos=0; renderRateCard(); });
+  modelSel.addEventListener('change', ()=>{ applyFilters(); pos=0; renderRateCard(); });
   qInput.addEventListener('input', ()=>{ applyFilters(); pos=0; renderRateCard(); });
 
   refreshRaterChip();
@@ -708,6 +782,10 @@ async function init(){
   const cats = [...new Set(data.map(e=>e.category))].sort();
   catSel.innerHTML = '<option value="">All categories</option>' + cats.map(c=>'<option>'+esc(c)+'</option>').join('');
   catSel.value = ui.cat && cats.includes(ui.cat) ? ui.cat : '';
+
+  const models = [...new Set(data.map(e=>e.model))];
+  modelSel.innerHTML = '<option value="">All models</option>' + models.map(m=>'<option>'+esc(m)+'</option>').join('');
+  modelSel.value = ui.model && models.includes(ui.model) ? ui.model : '';
 
   computeFiltered();
   if(ui.lastKey){
