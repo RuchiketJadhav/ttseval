@@ -95,19 +95,26 @@ main{max-width:760px;margin:22px auto 60px;padding:0 20px}
 
 .audio-wrap{margin-top:2px}
 audio{width:100%;height:38px;display:block}
-.audio-hint{font-size:11.5px;color:var(--ink-faint);margin-top:5px}
 .audio-missing{font-size:13px;color:var(--ink-soft);font-style:italic;padding:8px 0}
 
-.rate-block{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft)}
-.scale{display:flex;gap:8px;margin:4px 0 6px}
-.scale button{flex:1;border:1.5px solid var(--sc);background:var(--surface);border-radius:10px;padding:11px 0;font-weight:750;font-size:15px;color:var(--sc);cursor:pointer;transition:transform var(--dur),background var(--dur),color var(--dur)}
-.scale button:hover{transform:translateY(-1px)}
-.scale button.active{background:var(--sc);color:#fff;box-shadow:0 3px 10px -4px var(--sc)}
-.scale-labels{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-faint);margin-bottom:16px}
-
-.note-field{width:100%;min-height:58px;resize:vertical;border:1px solid var(--line);border-radius:9px;padding:9px 11px;font-size:13.5px;background:var(--surface)}
-.save-hint{font-size:11px;color:var(--good);height:15px;margin-top:5px;opacity:0;transition:opacity var(--dur);font-weight:600}
-.save-hint.show{opacity:1}
+.outputs-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);font-weight:750;margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft)}
+.outputs-list{margin-top:4px}
+.output-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--line-soft)}
+.output-row:last-child{border-bottom:0}
+.output-row.missing{opacity:.55}
+.output-main{flex:1;min-width:0}
+.output-title{font-size:13px;font-weight:650;color:var(--ink);margin-bottom:8px}
+.output-main audio{max-width:380px}
+.output-missing-msg{font-size:12.5px;color:var(--ink-faint);font-style:italic}
+.note-toggle{border:0;background:none;color:var(--accent-ink);font-size:11.5px;font-weight:650;cursor:pointer;padding:6px 0 0;display:block}
+.mini-note{width:100%;max-width:380px;min-height:48px;resize:vertical;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;background:var(--surface);margin-top:6px}
+.output-rate{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.mini-scale{display:flex;gap:4px}
+.mini-scale button{width:30px;height:30px;border:1.5px solid var(--sc);background:var(--surface);border-radius:8px;font-weight:750;font-size:12.5px;color:var(--sc);cursor:pointer;transition:transform var(--dur),background var(--dur),color var(--dur)}
+.mini-scale button:hover{transform:translateY(-1px)}
+.mini-scale button.active{background:var(--sc);color:#fff}
+.row-saved{font-size:10.5px;color:var(--good);font-weight:650}
+.row-saved.unrated{color:var(--ink-faint);font-weight:550}
 
 .nav-row{display:flex;align-items:center;gap:8px;margin-top:20px;flex-wrap:wrap}
 .nav-row .spacer{flex:1 1 auto;min-width:8px}
@@ -177,7 +184,10 @@ table.pivot-table{min-width:100%;border-collapse:collapse}
 @media(max-width:640px){
   .card{padding:20px 16px}
   .spoken{font-size:17px}
-  .scale button{font-size:13px;padding:10px 0}
+  .output-row{flex-direction:column;align-items:stretch}
+  .output-rate{flex-direction:row;align-items:center;margin-top:4px}
+  .output-main audio{max-width:none}
+  .mini-note{max-width:none}
   .overview{flex-direction:column;align-items:stretch}
   .filters-meta{margin-left:0}
   .done-badge{margin-left:0;width:100%}
@@ -242,11 +252,10 @@ table.pivot-table{min-width:100%;border-collapse:collapse}
 <div class="help-panel" id="helpPanel" hidden>
   <button class="close" id="helpClose" aria-label="Close" type="button">✕</button>
   <h4>Shortcuts</h4>
-  <div><kbd>←</kbd><kbd>→</kbd> previous / next</div>
-  <div><kbd>1</kbd>–<kbd>5</kbd> rate this clip</div>
+  <div><kbd>←</kbd><kbd>→</kbd> previous / next example</div>
   <div><kbd>U</kbd> jump to next unrated</div>
-  <div><kbd>Space</kbd> play / pause audio</div>
   <div><kbd>/</kbd> focus search</div>
+  <div style="margin-top:6px;color:#9aa0aa">Rate each model's clip with the numbers next to it.</div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -348,15 +357,37 @@ const mainArea = $('mainArea');
 const helpPanel = $('helpPanel'), helpClose = $('helpClose');
 
 /* ================= filtering ================= */
+function allModels(){ return [...new Set(data.map(e=>e.model))].sort(); }
+function groupByExample(){
+  const map = new Map();
+  for(const e of data){
+    const gk = e.index + '||' + e.category;
+    if(!map.has(gk)){
+      map.set(gk, { key: gk, index: e.index, category: e.category, original_text: e.original_text, normalized_text: e.normalized_text, outputs: [] });
+    }
+    map.get(gk).outputs.push(e);
+  }
+  return [...map.values()].sort((a,b)=> Number(a.index) - Number(b.index));
+}
+function groupIsRated(g, models){
+  return models.every(m=>{
+    const o = g.outputs.find(x=>x.model===m);
+    if(!o) return true; // nothing generated for this model on this example -> doesn't block "fully rated"
+    const r = ratings[keyOf(o)];
+    return r && r.rating;
+  });
+}
 function computeFiltered(){
   const c = catSel.value, mv = modelSel.value, qv = qInput.value.toLowerCase().trim(), st = ui.status;
-  filtered = data.filter(e=>{
-    if(c && e.category !== c) return false;
-    if(mv && e.model !== mv) return false;
-    if(qv && !((e.original_text+' '+e.normalized_text+' '+e.category).toLowerCase().includes(qv))) return false;
-    const r = ratings[keyOf(e)];
-    if(st==='rated' && !(r && r.rating)) return false;
-    if(st==='unrated' && (r && r.rating)) return false;
+  const groups = groupByExample();
+  filtered = groups.filter(g=>{
+    if(c && g.category !== c) return false;
+    if(qv && !((g.original_text+' '+g.normalized_text+' '+g.category).toLowerCase().includes(qv))) return false;
+    if(mv && !g.outputs.some(o=>o.model===mv)) return false;
+    if(st==='all') return true;
+    const rated = groupIsRated(g, mv ? [mv] : allModels());
+    if(st==='rated') return rated;
+    if(st==='unrated') return !rated;
     return true;
   });
   if(pos >= filtered.length) pos = Math.max(0, filtered.length-1);
@@ -441,8 +472,6 @@ function setNote(e, v){
 }
 
 /* ================= rate view ================= */
-function currentAudio(){ return mainArea.querySelector('audio'); }
-
 function renderRateCard(){
   if(!filtered.length){
     mainArea.innerHTML =
@@ -456,67 +485,105 @@ function renderRateCard(){
     filtersMeta.textContent = '';
     return;
   }
-  const e = filtered[pos];
-  const r = ratings[keyOf(e)] || {};
-  ui.lastKey = keyOf(e); persistUi();
+  const g = filtered[pos];
+  ui.lastKey = g.key; persistUi();
 
-  const ratedInView = filtered.filter(x=>{ const rr=ratings[keyOf(x)]; return rr && rr.rating; }).length;
-  filtersMeta.textContent = 'Showing ' + filtered.length + ' of ' + data.length + ' \u2022 ' + ratedInView + ' rated in this view';
+  const mv = modelSel.value;
+  const modelsToShow = mv ? [mv] : allModels();
+  const outputByModel = {};
+  for(const o of g.outputs) outputByModel[o.model] = o;
+
+  const ratedInView = filtered.filter(gr => groupIsRated(gr, modelsToShow)).length;
+  filtersMeta.textContent = 'Showing ' + filtered.length + ' of ' + groupByExample().length + ' examples \u2022 ' + ratedInView + ' fully rated in this view';
 
   const scaleLabels = ['Garbled','Off','Understandable','Natural','Perfect'];
-  let scaleBtns = '';
-  for(let i=1;i<=5;i++){
-    const c = ratingColor(i);
-    scaleBtns += '<button type="button" style="--sc:' + c + '" class="' + (r.rating===i?'active':'') + '" data-r="' + i + '" title="' + scaleLabels[i-1] + '">' + i + '</button>';
+
+  let doneForExample = 0, totalForExample = 0, outputsHtml = '';
+  for(const m of modelsToShow){
+    const o = outputByModel[m];
+    if(!o){
+      outputsHtml +=
+        '<div class="output-row missing">' +
+          '<div class="output-main">' +
+            '<div class="output-title">Speech generated by ' + esc(m) + '</div>' +
+            '<div class="output-missing-msg">Not generated for this example.</div>' +
+          '</div>' +
+        '</div>';
+      continue;
+    }
+    totalForExample++;
+    const r = ratings[keyOf(o)] || {};
+    if(r.rating) doneForExample++;
+    let scaleBtns = '';
+    for(let i=1;i<=5;i++){
+      const c = ratingColor(i);
+      scaleBtns += '<button type="button" style="--sc:' + c + '" class="' + (r.rating===i?'active':'') + '" data-r="' + i + '" data-model="' + esc(m) + '" title="' + scaleLabels[i-1] + '">' + i + '</button>';
+    }
+    const hasNote = !!(r.note && r.note.trim());
+    outputsHtml +=
+      '<div class="output-row" data-model="' + esc(m) + '">' +
+        '<div class="output-main">' +
+          '<div class="output-title">Speech generated by ' + esc(m) + '</div>' +
+          (o.audio_path
+            ? '<audio controls preload="none" src="' + esc(o.audio_path) + '"></audio>'
+            : '<div class="audio-missing">No audio file.</div>') +
+          '<button class="note-toggle" type="button">' + (hasNote ? 'Edit note' : '+ Add note') + '</button>' +
+          '<textarea class="mini-note" data-model="' + esc(m) + '" placeholder="Optional note \u2014 what went wrong, or what stood out"' + (hasNote?'':' hidden') + '>' + esc(r.note||'') + '</textarea>' +
+        '</div>' +
+        '<div class="output-rate">' +
+          '<div class="mini-scale">' + scaleBtns + '</div>' +
+          (r.rating ? '<span class="row-saved">Rated ' + r.rating + '/5</span>' : '<span class="row-saved unrated">Not rated</span>') +
+        '</div>' +
+      '</div>';
   }
 
-  const audioBlock = e.audio_path
-    ? '<div class="audio-wrap"><audio controls preload="none" src="' + esc(e.audio_path) + '"></audio>' +
-      '<div class="audio-hint" id="audioHint">Press <kbd>Space</kbd> to play or pause.</div></div>'
-    : '<div class="audio-missing">No audio file for this example.</div>';
-
-  const doneBadge = ratedInView === filtered.length ? '<span class="done-badge">\u2713 This view is fully rated</span>' : '';
+  const doneBadge = totalForExample>0 && doneForExample===totalForExample
+    ? '<span class="done-badge">\u2713 All rated</span>'
+    : (totalForExample>0 ? '<span class="chip">' + doneForExample + '/' + totalForExample + ' rated</span>' : '');
 
   mainArea.innerHTML =
     '<div class="card enter">' +
       '<div class="meta-row">' +
-        '<span class="chip">#' + esc(e.index) + '</span>' +
-        '<span class="chip category">' + esc(e.category) + '</span>' +
-        '<span class="chip">' + esc(e.model) + (e.voice? ' \u00b7 '+esc(e.voice):'') + '</span>' +
+        '<span class="chip">#' + esc(g.index) + '</span>' +
+        '<span class="chip category">' + esc(g.category) + '</span>' +
         doneBadge +
       '</div>' +
-      '<div class="block"><div class="block-label">Written form</div><div class="written">' + esc(e.original_text) + '</div></div>' +
-      '<div class="block"><div class="block-label">Should be read aloud as</div><div class="spoken">' + diffHighlight(e.original_text, e.normalized_text) + '</div></div>' +
-      '<div class="block"><div class="block-label">Listen</div>' + audioBlock + '</div>' +
-      '<div class="rate-block">' +
-        '<div class="block-label">Rate the reading</div>' +
-        '<div class="scale">' + scaleBtns + '</div>' +
-        '<div class="scale-labels"><span>' + scaleLabels[0] + '</span><span>' + scaleLabels[4] + '</span></div>' +
-        '<textarea class="note-field" id="noteField" placeholder="Optional note \u2014 what went wrong, or what stood out">' + esc(r.note||'') + '</textarea>' +
-        '<div class="save-hint" id="saveHint">Saved</div>' +
-      '</div>' +
+      '<div class="block"><div class="block-label">Written form</div><div class="written">' + esc(g.original_text) + '</div></div>' +
+      '<div class="block"><div class="block-label">Should be read aloud as</div><div class="spoken">' + diffHighlight(g.original_text, g.normalized_text) + '</div></div>' +
+      '<div class="outputs-label">Model outputs</div>' +
+      '<div class="outputs-list">' + outputsHtml + '</div>' +
       '<div class="nav-row">' +
         '<button class="btn" id="prevBtn" type="button" ' + (pos===0?'disabled':'') + '>\u2190 Previous</button>' +
         '<button class="btn" id="nextBtn" type="button" ' + (pos>=filtered.length-1?'disabled':'') + '>Next \u2192</button>' +
         '<div class="spacer"></div>' +
         '<button class="btn ghost" id="unratedBtn" type="button">Next unrated \u21b7</button>' +
       '</div>' +
-      '<div class="shortcuts-line"><kbd>\u2190</kbd><kbd>\u2192</kbd> navigate \u2022 <kbd>1</kbd>-<kbd>5</kbd> rate \u2022 <kbd>U</kbd> next unrated \u2022 <kbd>Space</kbd> play</div>' +
+      '<div class="shortcuts-line"><kbd>\u2190</kbd><kbd>\u2192</kbd> navigate \u2022 <kbd>U</kbd> next unrated \u2022 <kbd>/</kbd> search</div>' +
     '</div>';
 
-  mainArea.querySelectorAll('.scale button').forEach(btn=>{
-    btn.addEventListener('click', ()=> setRating(e, parseInt(btn.dataset.r,10)));
+  mainArea.querySelectorAll('.mini-scale button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const o = outputByModel[btn.dataset.model];
+      if(o) setRating(o, parseInt(btn.dataset.r,10));
+    });
   });
-  const noteField = $('noteField'), saveHint = $('saveHint');
-  let noteTimer = null, hintTimer = null;
-  noteField.addEventListener('input', ()=>{
-    clearTimeout(noteTimer);
-    noteTimer = setTimeout(()=>{
-      setNote(e, noteField.value);
-      saveHint.classList.add('show');
-      clearTimeout(hintTimer);
-      hintTimer = setTimeout(()=>saveHint.classList.remove('show'), 1400);
-    }, 400);
+  mainArea.querySelectorAll('.note-toggle').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const row = btn.closest('.output-row');
+      const ta = row ? row.querySelector('.mini-note') : null;
+      if(!ta) return;
+      ta.hidden = !ta.hidden;
+      if(!ta.hidden) ta.focus();
+    });
+  });
+  mainArea.querySelectorAll('.mini-note').forEach(ta=>{
+    const o = outputByModel[ta.dataset.model];
+    if(!o) return;
+    let t = null;
+    ta.addEventListener('input', ()=>{
+      clearTimeout(t);
+      t = setTimeout(()=>{ setNote(o, ta.value); showToast('Note saved'); }, 500);
+    });
   });
   $('prevBtn').addEventListener('click', ()=> goTo(pos-1));
   $('nextBtn').addEventListener('click', ()=> goTo(pos+1));
@@ -530,10 +597,11 @@ function goTo(newPos){
 }
 function jumpNextUnrated(){
   if(!filtered.length) return;
+  const mv = modelSel.value;
+  const models = mv ? [mv] : allModels();
   for(let step=1; step<=filtered.length; step++){
     const idx = (pos+step) % filtered.length;
-    const r = ratings[keyOf(filtered[idx])];
-    if(!(r && r.rating)){ pos = idx; renderRateCard(); return; }
+    if(!groupIsRated(filtered[idx], models)){ pos = idx; renderRateCard(); return; }
   }
   showToast('Everything in this view is rated');
 }
@@ -735,16 +803,8 @@ document.addEventListener('keydown', e=>{
   if(tab!=='rate') return;
   if(e.key==='ArrowLeft'){ e.preventDefault(); goTo(pos-1); }
   else if(e.key==='ArrowRight'){ e.preventDefault(); goTo(pos+1); }
-  else if(e.key>='1' && e.key<='5'){
-    if(!filtered.length) return;
-    setRating(filtered[pos], parseInt(e.key,10));
-  }
   else if(e.key==='u' || e.key==='U'){ jumpNextUnrated(); }
   else if(e.key==='?'){ helpPanel.hidden = !helpPanel.hidden; }
-  else if(e.key===' '){
-    const audio = currentAudio();
-    if(audio){ e.preventDefault(); audio.paused ? audio.play() : audio.pause(); }
-  }
 });
 
 /* ================= init ================= */
@@ -789,7 +849,7 @@ async function init(){
 
   computeFiltered();
   if(ui.lastKey){
-    const idx = filtered.findIndex(e=>keyOf(e)===ui.lastKey);
+    const idx = filtered.findIndex(g=>g.key===ui.lastKey);
     if(idx>=0) pos = idx;
   }
   renderMain();
